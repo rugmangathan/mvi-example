@@ -5,7 +5,18 @@
 // Proprietary and confidential.
 //
 
-import Foundation
+import RxSwift
 
 class BudapestIntentions {
+  let textFieldChanges: Observable<String?>
+  
+  init(textFieldChanges: Observable<String?>) {
+    self.textFieldChanges = textFieldChanges
+  }
+  
+  func textChanges() -> Observable<String> {
+    return textFieldChanges
+      .filter { $0 != nil }
+      .map { $0! }
+  }
 }
