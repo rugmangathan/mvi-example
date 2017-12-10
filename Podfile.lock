@@ -1,0 +1,37 @@
+PODS:
+  - Cuckoo (0.10.1)
+  - RxBlocking (4.0.0):
+    - RxSwift (~> 4.0)
+  - RxCocoa (4.0.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.0.0)
+  - RxTest (4.0.0):
+    - RxSwift (~> 4.0)
+
+DEPENDENCIES:
+  - Cuckoo (= 0.10.1)
+  - RxBlocking (= 4.0.0)
+  - RxCocoa (from `https://github.com/ReactiveX/RxSwift.git`, commit `a1e6be8`)
+  - RxSwift (= 4.0.0)
+  - RxTest (= 4.0.0)
+
+EXTERNAL SOURCES:
+  RxCocoa:
+    :commit: a1e6be8
+    :git: https://github.com/ReactiveX/RxSwift.git
+
+CHECKOUT OPTIONS:
+  RxCocoa:
+    :commit: a1e6be8
+    :git: https://github.com/ReactiveX/RxSwift.git
+
+SPEC CHECKSUMS:
+  Cuckoo: 4850c124f6d758b391a28c2f164404fda8b6396f
+  RxBlocking: 923c2c8106d80d7c2d6b276afd66ce3b10824836
+  RxCocoa: 36c5f6bf8c6d4ab5512f1d54d5c86a1cc1456e0a
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
+  RxTest: 0041e792cede35e53e4749f378d21482af0e9d12
+
+PODFILE CHECKSUM: 31d96c2d8aa678a502efd8f85c885fa798ef1c0b
+
+COCOAPODS: 1.3.1

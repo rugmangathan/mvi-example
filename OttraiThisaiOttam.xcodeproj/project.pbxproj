@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E22BED5712FFDD0F076EEF3 /* Pods_OttraiThisaiOttam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131D9DD6D8E12AE07203B402 /* Pods_OttraiThisaiOttam.framework */; };
+		D21B4E43724DF0B65F1EFE4A /* Pods_OttraiThisaiOttamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8417414527CB1684338395 /* Pods_OttraiThisaiOttamTests.framework */; };
 		F4B650141FDD336D00EC4972 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B650131FDD336D00EC4972 /* AppDelegate.swift */; };
 		F4B650161FDD336D00EC4972 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B650151FDD336D00EC4972 /* ViewController.swift */; };
 		F4B650191FDD336D00EC4972 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B650171FDD336D00EC4972 /* Main.storyboard */; };
@@ -34,6 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		131D9DD6D8E12AE07203B402 /* Pods_OttraiThisaiOttam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OttraiThisaiOttam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C8417414527CB1684338395 /* Pods_OttraiThisaiOttamTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OttraiThisaiOttamTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CAD6327925FE7DA0EAE4E27 /* Pods-OttraiThisaiOttam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OttraiThisaiOttam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OttraiThisaiOttam/Pods-OttraiThisaiOttam.debug.xcconfig"; sourceTree = "<group>"; };
+		8F54B9803D3F768B0E66E701 /* Pods-OttraiThisaiOttamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OttraiThisaiOttamTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OttraiThisaiOttamTests/Pods-OttraiThisaiOttamTests.release.xcconfig"; sourceTree = "<group>"; };
+		94A983DC604214B43E2F93B1 /* Pods-OttraiThisaiOttam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OttraiThisaiOttam.release.xcconfig"; path = "Pods/Target Support Files/Pods-OttraiThisaiOttam/Pods-OttraiThisaiOttam.release.xcconfig"; sourceTree = "<group>"; };
+		9966FB95DCCB4CC1FA71A54C /* Pods-OttraiThisaiOttamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OttraiThisaiOttamTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OttraiThisaiOttamTests/Pods-OttraiThisaiOttamTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F4B650101FDD336D00EC4972 /* OttraiThisaiOttam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OttraiThisaiOttam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B650131FDD336D00EC4972 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4B650151FDD336D00EC4972 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E22BED5712FFDD0F076EEF3 /* Pods_OttraiThisaiOttam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D21B4E43724DF0B65F1EFE4A /* Pods_OttraiThisaiOttamTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +84,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		464D77DC41DFE8837B3867BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				131D9DD6D8E12AE07203B402 /* Pods_OttraiThisaiOttam.framework */,
+				3C8417414527CB1684338395 /* Pods_OttraiThisaiOttamTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F2C8A46CC123C1DCD0A152E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4CAD6327925FE7DA0EAE4E27 /* Pods-OttraiThisaiOttam.debug.xcconfig */,
+				94A983DC604214B43E2F93B1 /* Pods-OttraiThisaiOttam.release.xcconfig */,
+				9966FB95DCCB4CC1FA71A54C /* Pods-OttraiThisaiOttamTests.debug.xcconfig */,
+				8F54B9803D3F768B0E66E701 /* Pods-OttraiThisaiOttamTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F4B650071FDD336D00EC4972 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +111,8 @@
 				F4B650271FDD336D00EC4972 /* OttraiThisaiOttamTests */,
 				F4B650321FDD336D00EC4972 /* OttraiThisaiOttamUITests */,
 				F4B650111FDD336D00EC4972 /* Products */,
+				7F2C8A46CC123C1DCD0A152E /* Pods */,
+				464D77DC41DFE8837B3867BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +164,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4B650381FDD336D00EC4972 /* Build configuration list for PBXNativeTarget "OttraiThisaiOttam" */;
 			buildPhases = (
+				B24846E56EF051906702CDCD /* [CP] Check Pods Manifest.lock */,
 				F4B6500C1FDD336D00EC4972 /* Sources */,
 				F4B6500D1FDD336D00EC4972 /* Frameworks */,
 				F4B6500E1FDD336D00EC4972 /* Resources */,
+				54E8D83D106E1C4E0835D320 /* [CP] Embed Pods Frameworks */,
+				3FEEC96C98EA6A9451E47B83 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4B6503B1FDD336D00EC4972 /* Build configuration list for PBXNativeTarget "OttraiThisaiOttamTests" */;
 			buildPhases = (
+				68F19223CC898548EE436EC6 /* [CP] Check Pods Manifest.lock */,
 				F4B650201FDD336D00EC4972 /* Sources */,
 				F4B650211FDD336D00EC4972 /* Frameworks */,
 				F4B650221FDD336D00EC4972 /* Resources */,
+				58D9C9975780045B62C338B6 /* [CP] Embed Pods Frameworks */,
+				01806510D453162CAB1F9920 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +291,119 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01806510D453162CAB1F9920 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OttraiThisaiOttamTests/Pods-OttraiThisaiOttamTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FEEC96C98EA6A9451E47B83 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OttraiThisaiOttam/Pods-OttraiThisaiOttam-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54E8D83D106E1C4E0835D320 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OttraiThisaiOttam/Pods-OttraiThisaiOttam-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OttraiThisaiOttam/Pods-OttraiThisaiOttam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58D9C9975780045B62C338B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OttraiThisaiOttamTests/Pods-OttraiThisaiOttamTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Cuckoo/Cuckoo.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cuckoo.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OttraiThisaiOttamTests/Pods-OttraiThisaiOttamTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68F19223CC898548EE436EC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OttraiThisaiOttamTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B24846E56EF051906702CDCD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OttraiThisaiOttam-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F4B6500C1FDD336D00EC4972 /* Sources */ = {
@@ -424,6 +575,7 @@
 		};
 		F4B650391FDD336D00EC4972 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CAD6327925FE7DA0EAE4E27 /* Pods-OttraiThisaiOttam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -439,6 +591,7 @@
 		};
 		F4B6503A1FDD336D00EC4972 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94A983DC604214B43E2F93B1 /* Pods-OttraiThisaiOttam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +607,7 @@
 		};
 		F4B6503C1FDD336D00EC4972 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9966FB95DCCB4CC1FA71A54C /* Pods-OttraiThisaiOttamTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +625,7 @@
 		};
 		F4B6503D1FDD336D00EC4972 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F54B9803D3F768B0E66E701 /* Pods-OttraiThisaiOttamTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
