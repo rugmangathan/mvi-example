@@ -75,4 +75,13 @@ class BudapestModelTests: XCTestCase {
     let expected = "Rugmangathan"
     XCTAssertEqual(BudapestModel().removeWhitespaces(actual), expected)
   }
+
+  func testShouldRemoveLeadingWhiteSpaces_whenNameChangesHasTrailingWhitespaces() {
+    // Setup
+    let actual = "Rugmangathan   "
+
+    // Assert
+    let expected = "Rugmangathan"
+    XCTAssertEqual(BudapestModel().removeWhitespaces(actual), expected)
+  }
 }
