@@ -16,17 +16,21 @@ import RxCocoa
 
 class BudapestModelTests: XCTestCase {
   let disposeBag = DisposeBag()
+  var testObserver: TestableObserver<BudapestState>!
+  var nameChanges: PublishRelay<String?>!
 
-  func testShouldEmitInitialState_whenNameIsEmpty() {
-    // Setup
-    let testObserver = TestScheduler(initialClock: 0).createObserver(BudapestState.self)
-    let nameChanges = PublishRelay<String?>()
+  override func setUp() {
+    super.setUp()
+    testObserver = TestScheduler(initialClock: 0).createObserver(BudapestState.self)
+    nameChanges = PublishRelay<String?>()
     let intentions = BudapestIntentions(textFieldChanges: nameChanges.asObservable())
     BudapestModel()
       .bind(intentions: intentions)
       .subscribe(testObserver)
       .disposed(by: disposeBag)
+  }
 
+  func testShouldEmitStrangerState_whenNameIsEmpty() {
     // Fake events
     nameChanges.accept("")
 
@@ -37,17 +41,7 @@ class BudapestModelTests: XCTestCase {
     XCTAssertEqual(testObserver.events, expectedEvent)
   }
 
-  func testShouldEmitNameChanges_whenUserTypes() {
-    // Setup
-    let testObserver = TestScheduler(initialClock: 0).createObserver(BudapestState.self)
-    let nameChanges = PublishRelay<String?>()
-    let intentions = BudapestIntentions(textFieldChanges: nameChanges.asObservable())
-
-    BudapestModel()
-      .bind(intentions: intentions)
-      .subscribe(testObserver)
-      .disposed(by: disposeBag)
-
+  func testShouldEmitGreetingState_whenNameChanges() {
     // Fake Events
     nameChanges.accept("RMK")
 
@@ -58,7 +52,7 @@ class BudapestModelTests: XCTestCase {
     XCTAssertEqual(testObserver.events, expectedEvents)
   }
 
-  func testShouldRemoveWhitespaces_whenUserEntersWhitespacesOnlyText() {
+  func testShouldRemoveWhitespaces_whenNameHasOnlyWhitespaces() {
     // Setup
     let actual = "  "
 
@@ -67,7 +61,7 @@ class BudapestModelTests: XCTestCase {
     XCTAssertEqual(BudapestModel().removeWhitespaces(actual), expected)
   }
 
-  func testShouldRemoveLeadingSpaces_whenNameChangesTextHasLeadingWhitespaces() {
+  func testShouldRemoveLeadingSpaces_whenNameHasLeadingWhitespaces() {
     // Setup
     let actual = "   Rugmangathan"
 
@@ -76,7 +70,7 @@ class BudapestModelTests: XCTestCase {
     XCTAssertEqual(BudapestModel().removeWhitespaces(actual), expected)
   }
 
-  func testShouldRemoveLeadingWhiteSpaces_whenNameChangesHasTrailingWhitespaces() {
+  func testShouldRemoveLeadingWhiteSpaces_whenNameHasTrailingWhitespaces() {
     // Setup
     let actual = "Rugmangathan   "
 
@@ -85,7 +79,7 @@ class BudapestModelTests: XCTestCase {
     XCTAssertEqual(BudapestModel().removeWhitespaces(actual), expected)
   }
 
-  func testShouldRemoveExtraWhitespacesInBetweenName_whenNameChangesHasMoreThanOneWhiteSpacesInBetween() {
+  func testShouldRemoveExtraWhitespacesInBetweenName_whenNameHasMoreThanOneWhiteSpacesInBetween() {
     // Setup
     let actual = "Rugmangathan   M K"
 
