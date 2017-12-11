@@ -1,0 +1,5 @@
+version: "Apple Swift version 4.0.3 (swiftlang-900.0.74.1 clang-900.0.39.2)"
+options: "e9d662efb3408d2544d50af7b4ab1306"
+build_time: [1512898896, 950281000]
+inputs:
+  "/Users/RMK_IINC/Documents/Projects/Demo/OttraiThisaiOttam/Pods/Cuckoo/Generator/Source/TemplateEncoder/main.swift": [1512898118, 0]
