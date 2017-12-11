@@ -7,5 +7,14 @@
 
 import Foundation
 
-class BudapestState {
+class BudapestState: Equatable {
+  let message: String
+
+  init(_ message: String) {
+    self.message = message
+  }
+
+  static func ==(lhs: BudapestState, rhs: BudapestState) -> Bool {
+    return lhs.message == rhs.message
+  }
 }

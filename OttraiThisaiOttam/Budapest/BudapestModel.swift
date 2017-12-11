@@ -5,7 +5,12 @@
 // Proprietary and confidential.
 //
 
-import Foundation
+import RxSwift
 
 class BudapestModel {
+  func bind(intentions: BudapestIntentions) -> Observable<BudapestState> {
+    return intentions
+      .textChanges()
+      .map { BudapestState($0) }
+  }
 }
