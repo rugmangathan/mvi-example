@@ -15,6 +15,8 @@
 		F413CBFA1FDD3AB8002DBC72 /* BudapestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413CBF51FDD3AB8002DBC72 /* BudapestModel.swift */; };
 		F413CBFB1FDD3AB8002DBC72 /* BudapestState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413CBF61FDD3AB8002DBC72 /* BudapestState.swift */; };
 		F413CBFE1FDD3B19002DBC72 /* BudapestModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413CBFD1FDD3B19002DBC72 /* BudapestModelTests.swift */; };
+		F454A6B41FDE7E0E0010DD98 /* BudapestViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454A6B31FDE7E0E0010DD98 /* BudapestViewTests.swift */; };
+		F454A6B61FDE7E860010DD98 /* SpyableBudapestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454A6B51FDE7E860010DD98 /* SpyableBudapestView.swift */; };
 		F4B650141FDD336D00EC4972 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B650131FDD336D00EC4972 /* AppDelegate.swift */; };
 		F4B650191FDD336D00EC4972 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B650171FDD336D00EC4972 /* Main.storyboard */; };
 		F4B6501B1FDD336D00EC4972 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4B6501A1FDD336D00EC4972 /* Assets.xcassets */; };
@@ -53,6 +55,8 @@
 		F413CBF51FDD3AB8002DBC72 /* BudapestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudapestModel.swift; sourceTree = "<group>"; };
 		F413CBF61FDD3AB8002DBC72 /* BudapestState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudapestState.swift; sourceTree = "<group>"; };
 		F413CBFD1FDD3B19002DBC72 /* BudapestModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudapestModelTests.swift; sourceTree = "<group>"; };
+		F454A6B31FDE7E0E0010DD98 /* BudapestViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudapestViewTests.swift; sourceTree = "<group>"; };
+		F454A6B51FDE7E860010DD98 /* SpyableBudapestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyableBudapestView.swift; sourceTree = "<group>"; };
 		F4B650101FDD336D00EC4972 /* OttraiThisaiOttam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OttraiThisaiOttam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B650131FDD336D00EC4972 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4B650181FDD336D00EC4972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				F413CBFD1FDD3B19002DBC72 /* BudapestModelTests.swift */,
+				F454A6B31FDE7E0E0010DD98 /* BudapestViewTests.swift */,
+				F454A6B51FDE7E860010DD98 /* SpyableBudapestView.swift */,
 			);
 			path = Budapest;
 			sourceTree = "<group>";
@@ -455,7 +461,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4B650291FDD336D00EC4972 /* OttraiThisaiOttamTests.swift in Sources */,
+				F454A6B41FDE7E0E0010DD98 /* BudapestViewTests.swift in Sources */,
 				F413CBFE1FDD3B19002DBC72 /* BudapestModelTests.swift in Sources */,
+				F454A6B61FDE7E860010DD98 /* SpyableBudapestView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
