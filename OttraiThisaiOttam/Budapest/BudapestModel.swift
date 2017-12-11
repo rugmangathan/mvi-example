@@ -13,4 +13,8 @@ class BudapestModel {
       .textChanges()
       .map { BudapestState($0) }
   }
+
+  func removeWhitespaces(_ name: String) -> String {
+    return ""
+  }
 }

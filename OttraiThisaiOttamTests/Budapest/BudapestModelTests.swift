@@ -57,4 +57,12 @@ class BudapestModelTests: XCTestCase {
     ]
     XCTAssertEqual(testObserver.events, expectedEvents)
   }
+
+  func testShouldEmitEmpty_whenUserEntersWhitespacesOnlyText() {
+    let actual = "  "
+
+    // Assert
+    let expected = ""
+    XCTAssertEqual(BudapestModel().removeWhitespaces(actual), expected)
+  }
 }
