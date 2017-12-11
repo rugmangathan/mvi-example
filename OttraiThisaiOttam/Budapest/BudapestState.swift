@@ -8,13 +8,13 @@
 import Foundation
 
 class BudapestState: Equatable {
-  let message: String
+  let name: String
 
   init(_ message: String) {
-    self.message = message
+    self.name = message
   }
 
   static func ==(lhs: BudapestState, rhs: BudapestState) -> Bool {
-    return lhs.message == rhs.message
+    return lhs.name == rhs.name
   }
 }

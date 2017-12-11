@@ -11,4 +11,5 @@ import Foundation
 
 class SpyableBudapestView: BudapestView {
   func greetStranger() {}
+  func greet(_ message: String) {}
 }

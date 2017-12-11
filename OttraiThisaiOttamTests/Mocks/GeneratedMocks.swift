@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: OttraiThisaiOttamTests/Budapest/SpyableBudapestView.swift at 2017-12-11 09:16:15 +0000
+// MARK: - Mocks generated from file: OttraiThisaiOttamTests/Budapest/SpyableBudapestView.swift at 2017-12-11 09:24:53 +0000
 
 //
 //  SpyableBudapestView.swift
@@ -45,6 +45,19 @@ class MockSpyableBudapestView: SpyableBudapestView, Cuckoo.Mock {
         
     }
     
+     override func greet(_ message: String)  {
+        
+            return cuckoo_manager.call("greet(_: String)",
+                parameters: (message),
+                original: observed.map { o in
+                    return { (args) in
+                        let (message) = args
+                         o.greet(message)
+                    }
+                })
+        
+    }
+    
 
     struct __StubbingProxy_SpyableBudapestView: Cuckoo.StubbingProxy {
         private let cuckoo_manager: Cuckoo.MockManager
@@ -57,6 +70,11 @@ class MockSpyableBudapestView: SpyableBudapestView, Cuckoo.Mock {
         func greetStranger() -> Cuckoo.StubNoReturnFunction<()> {
             let matchers: [Cuckoo.ParameterMatcher<Void>] = []
             return .init(stub: cuckoo_manager.createStub("greetStranger()", parameterMatchers: matchers))
+        }
+        
+        func greet<M1: Cuckoo.Matchable>(_ message: M1) -> Cuckoo.StubNoReturnFunction<(String)> where M1.MatchedType == String {
+            let matchers: [Cuckoo.ParameterMatcher<(String)>] = [wrap(matchable: message) { $0 }]
+            return .init(stub: cuckoo_manager.createStub("greet(_: String)", parameterMatchers: matchers))
         }
         
     }
@@ -82,6 +100,12 @@ class MockSpyableBudapestView: SpyableBudapestView, Cuckoo.Mock {
             return cuckoo_manager.verify("greetStranger()", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
         }
         
+        @discardableResult
+        func greet<M1: Cuckoo.Matchable>(_ message: M1) -> Cuckoo.__DoNotUse<Void> where M1.MatchedType == String {
+            let matchers: [Cuckoo.ParameterMatcher<(String)>] = [wrap(matchable: message) { $0 }]
+            return cuckoo_manager.verify("greet(_: String)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+        
     }
 
 
@@ -94,6 +118,10 @@ class MockSpyableBudapestView: SpyableBudapestView, Cuckoo.Mock {
 
     
      override func greetStranger()  {
+        return DefaultValueRegistry.defaultValue(for: Void.self)
+    }
+    
+     override func greet(_ message: String)  {
         return DefaultValueRegistry.defaultValue(for: Void.self)
     }
     

@@ -17,8 +17,23 @@ class BudapestViewTests: XCTestCase {
       .spy(on: SpyableBudapestView())
     let renderer = BudapestViewRenderer(spyView)
 
+    // Fake events
     renderer.render(BudapestState(""))
 
+    // Assert
     verify(spyView, times(1)).greetStranger()
+  }
+
+  func testRenderGreetingState() {
+    // Setup
+    let spyView = MockSpyableBudapestView()
+      .spy(on: SpyableBudapestView())
+    let renderer = BudapestViewRenderer(spyView)
+
+    // Fake events
+    renderer.render(BudapestState("Rugmangathan"))
+
+    // Assert
+    verify(spyView, times(1)).greet("Rugmangathan")
   }
 }

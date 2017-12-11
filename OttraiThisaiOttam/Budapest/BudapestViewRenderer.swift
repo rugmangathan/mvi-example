@@ -14,6 +14,8 @@ class BudapestViewRenderer {
   }
 
   func render(_ state: BudapestState) {
-    view.greetStranger()
+    state.name.isEmpty
+      ? view.greetStranger()
+      : view.greet(state.name)
   }
 }
