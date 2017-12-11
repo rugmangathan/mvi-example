@@ -11,6 +11,7 @@ class BudapestModel {
   func bind(intentions: BudapestIntentions) -> Observable<BudapestState> {
     return intentions
       .textChanges()
+      .map { self.removeWhitespaces($0) }
       .map { BudapestState($0) }
   }
 
