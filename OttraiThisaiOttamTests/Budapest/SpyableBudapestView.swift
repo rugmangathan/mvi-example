@@ -10,4 +10,5 @@ import Foundation
 @testable import OttraiThisaiOttam
 
 class SpyableBudapestView: BudapestView {
+  func greetStranger() {}
 }

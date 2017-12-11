@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: OttraiThisaiOttamTests/Budapest/SpyableBudapestView.swift at 2017-12-11 09:00:15 +0000
+// MARK: - Mocks generated from file: OttraiThisaiOttamTests/Budapest/SpyableBudapestView.swift at 2017-12-11 09:16:15 +0000
 
 //
 //  SpyableBudapestView.swift
@@ -32,6 +32,19 @@ class MockSpyableBudapestView: SpyableBudapestView, Cuckoo.Mock {
     
 
     
+     override func greetStranger()  {
+        
+            return cuckoo_manager.call("greetStranger()",
+                parameters: (),
+                original: observed.map { o in
+                    return { (args) in
+                        let () = args
+                         o.greetStranger()
+                    }
+                })
+        
+    }
+    
 
     struct __StubbingProxy_SpyableBudapestView: Cuckoo.StubbingProxy {
         private let cuckoo_manager: Cuckoo.MockManager
@@ -40,6 +53,11 @@ class MockSpyableBudapestView: SpyableBudapestView, Cuckoo.Mock {
             self.cuckoo_manager = manager
         }
         
+        
+        func greetStranger() -> Cuckoo.StubNoReturnFunction<()> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return .init(stub: cuckoo_manager.createStub("greetStranger()", parameterMatchers: matchers))
+        }
         
     }
 
@@ -58,6 +76,12 @@ class MockSpyableBudapestView: SpyableBudapestView, Cuckoo.Mock {
         
 
         
+        @discardableResult
+        func greetStranger() -> Cuckoo.__DoNotUse<Void> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return cuckoo_manager.verify("greetStranger()", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+        
     }
 
 
@@ -68,6 +92,10 @@ class MockSpyableBudapestView: SpyableBudapestView, Cuckoo.Mock {
 
     
 
+    
+     override func greetStranger()  {
+        return DefaultValueRegistry.defaultValue(for: Void.self)
+    }
     
 }
 

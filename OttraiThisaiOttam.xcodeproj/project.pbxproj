@@ -18,6 +18,7 @@
 		F454A6B41FDE7E0E0010DD98 /* BudapestViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454A6B31FDE7E0E0010DD98 /* BudapestViewTests.swift */; };
 		F454A6B61FDE7E860010DD98 /* SpyableBudapestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454A6B51FDE7E860010DD98 /* SpyableBudapestView.swift */; };
 		F454A6BB1FDE80B90010DD98 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454A6BA1FDE80B90010DD98 /* GeneratedMocks.swift */; };
+		F454A6BD1FDE81370010DD98 /* BudapestViewRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454A6BC1FDE81370010DD98 /* BudapestViewRenderer.swift */; };
 		F4B650141FDD336D00EC4972 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B650131FDD336D00EC4972 /* AppDelegate.swift */; };
 		F4B650191FDD336D00EC4972 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B650171FDD336D00EC4972 /* Main.storyboard */; };
 		F4B6501B1FDD336D00EC4972 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4B6501A1FDD336D00EC4972 /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		F454A6B31FDE7E0E0010DD98 /* BudapestViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudapestViewTests.swift; sourceTree = "<group>"; };
 		F454A6B51FDE7E860010DD98 /* SpyableBudapestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyableBudapestView.swift; sourceTree = "<group>"; };
 		F454A6BA1FDE80B90010DD98 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
+		F454A6BC1FDE81370010DD98 /* BudapestViewRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudapestViewRenderer.swift; sourceTree = "<group>"; };
 		F4B650101FDD336D00EC4972 /* OttraiThisaiOttam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OttraiThisaiOttam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B650131FDD336D00EC4972 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4B650181FDD336D00EC4972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				F413CBF41FDD3AB8002DBC72 /* BudapestView.swift */,
 				F413CBF51FDD3AB8002DBC72 /* BudapestModel.swift */,
 				F413CBF61FDD3AB8002DBC72 /* BudapestState.swift */,
+				F454A6BC1FDE81370010DD98 /* BudapestViewRenderer.swift */,
 			);
 			path = Budapest;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 			files = (
 				F413CBF91FDD3AB8002DBC72 /* BudapestView.swift in Sources */,
 				F413CBF81FDD3AB8002DBC72 /* BudapestIntentions.swift in Sources */,
+				F454A6BD1FDE81370010DD98 /* BudapestViewRenderer.swift in Sources */,
 				F413CBFA1FDD3AB8002DBC72 /* BudapestModel.swift in Sources */,
 				F413CBFB1FDD3AB8002DBC72 /* BudapestState.swift in Sources */,
 				F413CBF71FDD3AB8002DBC72 /* BudapestViewController.swift in Sources */,

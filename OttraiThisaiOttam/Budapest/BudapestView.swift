@@ -8,4 +8,5 @@
 import Foundation
 
 protocol BudapestView {
+  func greetStranger()
 }

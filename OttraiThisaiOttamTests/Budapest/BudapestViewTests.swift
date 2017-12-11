@@ -11,5 +11,14 @@ import Cuckoo
 @testable import OttraiThisaiOttam
 
 class BudapestViewTests: XCTestCase {
-  
+  func testRenderGreetStranger() {
+    // Setup
+    let spyView = MockSpyableBudapestView()
+      .spy(on: SpyableBudapestView())
+    let renderer = BudapestViewRenderer(spyView)
+
+    renderer.render(BudapestState(""))
+
+    verify(spyView, times(1)).greetStranger()
+  }
 }
