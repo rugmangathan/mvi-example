@@ -15,6 +15,6 @@ class BudapestModel {
   }
 
   func removeWhitespaces(_ name: String) -> String {
-    return ""
+    return name.trimmingCharacters(in: .whitespaces)
   }
 }
