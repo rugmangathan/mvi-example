@@ -31,7 +31,7 @@ class BudapestModelTests: XCTestCase {
   }
 
   func testShouldEmitStrangerState_whenNameIsEmpty() {
-    // Fake events
+    // Act
     nameChanges.accept("")
 
     // Assert
@@ -42,7 +42,7 @@ class BudapestModelTests: XCTestCase {
   }
 
   func testShouldEmitGreetingState_whenNameChanges() {
-    // Fake Events
+    // Act
     nameChanges.accept("RMK")
 
     // Assert
@@ -58,7 +58,7 @@ class BudapestModelTests: XCTestCase {
 
     // Assert
     let expected = ""
-    XCTAssertEqual(BudapestModel().removeWhitespaces(actual), expected)
+    XCTAssertEqual(BudapestModel().toDisplayName(actual), expected)
   }
 
   func testShouldRemoveLeadingSpaces_whenNameHasLeadingWhitespaces() {
@@ -67,16 +67,16 @@ class BudapestModelTests: XCTestCase {
 
     // Assert
     let expected = "Rugmangathan"
-    XCTAssertEqual(BudapestModel().removeWhitespaces(actual), expected)
+    XCTAssertEqual(BudapestModel().toDisplayName(actual), expected)
   }
 
-  func testShouldRemoveLeadingWhiteSpaces_whenNameHasTrailingWhitespaces() {
+  func testShouldRemoveTrailingWhiteSpaces_whenNameHasTrailingWhitespaces() {
     // Setup
     let actual = "Rugmangathan   "
 
     // Assert
     let expected = "Rugmangathan"
-    XCTAssertEqual(BudapestModel().removeWhitespaces(actual), expected)
+    XCTAssertEqual(BudapestModel().toDisplayName(actual), expected)
   }
 
   func testShouldRemoveExtraWhitespacesInBetweenName_whenNameHasMoreThanOneWhiteSpacesInBetween() {
@@ -85,6 +85,6 @@ class BudapestModelTests: XCTestCase {
 
     // Assert
     let expected = "Rugmangathan M K"
-    XCTAssertEqual(BudapestModel().removeWhitespaces(actual), expected)
+    XCTAssertEqual(BudapestModel().toDisplayName(actual), expected)
   }
 }

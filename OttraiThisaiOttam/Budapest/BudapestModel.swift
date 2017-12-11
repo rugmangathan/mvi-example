@@ -11,11 +11,11 @@ class BudapestModel {
   func bind(intentions: BudapestIntentions) -> Observable<BudapestState> {
     return intentions
       .textChanges()
-      .map { self.removeWhitespaces($0) }
+      .map { self.toDisplayName($0) }
       .map { BudapestState($0) }
   }
 
-  func removeWhitespaces(_ name: String) -> String {
+  func toDisplayName(_ name: String) -> String {
     var name = name
     let pattern = "\\s+"
     do {
@@ -27,7 +27,8 @@ class BudapestModel {
                                             withTemplate: " ")
       return name.trimmingCharacters(in: .whitespaces)
     } catch let error {
-      return error.localizedDescription
+      print(error.localizedDescription)
+      return name
     }
   }
 }
