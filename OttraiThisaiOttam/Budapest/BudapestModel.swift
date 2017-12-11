@@ -15,6 +15,18 @@ class BudapestModel {
   }
 
   func removeWhitespaces(_ name: String) -> String {
-    return name.trimmingCharacters(in: .whitespaces)
+    var name = name
+    let pattern = "\\s+"
+    do {
+      let regex = try NSRegularExpression(pattern: pattern, options: .caseInsensitive)
+      let range = NSRange(location: 0, length: name.count)
+      name = regex.stringByReplacingMatches(in: name,
+                                            options: [],
+                                            range: range,
+                                            withTemplate: " ")
+      return name.trimmingCharacters(in: .whitespaces)
+    } catch let error {
+      return error.localizedDescription
+    }
   }
 }
