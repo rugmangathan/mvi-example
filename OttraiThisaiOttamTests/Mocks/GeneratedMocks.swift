@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: OttraiThisaiOttamTests/Budapest/SpyableBudapestView.swift at 2017-12-11 10:44:52 +0000
+// MARK: - Mocks generated from file: OttraiThisaiOttamTests/Budapest/SpyableBudapestView.swift at 2017-12-12 09:26:02 +0000
 
 //
 //  SpyableBudapestView.swift

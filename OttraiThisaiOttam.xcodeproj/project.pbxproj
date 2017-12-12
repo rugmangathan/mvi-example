@@ -26,6 +26,8 @@
 		F4B650291FDD336D00EC4972 /* OttraiThisaiOttamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B650281FDD336D00EC4972 /* OttraiThisaiOttamTests.swift */; };
 		F4B650341FDD336D00EC4972 /* OttraiThisaiOttamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B650331FDD336D00EC4972 /* OttraiThisaiOttamUITests.swift */; };
 		F4B956701FDEB1A000DA4E6C /* CounterModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B9566F1FDEB19F00DA4E6C /* CounterModelTests.swift */; };
+		F4B956721FDEB66B00DA4E6C /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B956711FDEB66B00DA4E6C /* CounterState.swift */; };
+		F4B956741FDEB83200DA4E6C /* CounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B956731FDEB83200DA4E6C /* CounterModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		F4B650331FDD336D00EC4972 /* OttraiThisaiOttamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OttraiThisaiOttamUITests.swift; sourceTree = "<group>"; };
 		F4B650351FDD336D00EC4972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4B9566F1FDEB19F00DA4E6C /* CounterModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterModelTests.swift; sourceTree = "<group>"; };
+		F4B956711FDEB66B00DA4E6C /* CounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
+		F4B956731FDEB83200DA4E6C /* CounterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +219,8 @@
 		F4B9566B1FDEB10D00DA4E6C /* Counter */ = {
 			isa = PBXGroup;
 			children = (
+				F4B956711FDEB66B00DA4E6C /* CounterState.swift */,
+				F4B956731FDEB83200DA4E6C /* CounterModel.swift */,
 			);
 			path = Counter;
 			sourceTree = "<group>";
@@ -500,7 +506,9 @@
 				F413CBFA1FDD3AB8002DBC72 /* BudapestModel.swift in Sources */,
 				F413CBFB1FDD3AB8002DBC72 /* BudapestState.swift in Sources */,
 				F413CBF71FDD3AB8002DBC72 /* BudapestViewController.swift in Sources */,
+				F4B956721FDEB66B00DA4E6C /* CounterState.swift in Sources */,
 				F4B650141FDD336D00EC4972 /* AppDelegate.swift in Sources */,
+				F4B956741FDEB83200DA4E6C /* CounterModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
