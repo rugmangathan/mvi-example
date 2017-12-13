@@ -16,6 +16,24 @@ import Cuckoo
 let disposeBag = DisposeBag()
 
 class CounterModelTests: XCTestCase {
+  var incrementEvents: PublishRelay<Void>!
+  var decrementClicks: PublishRelay<Void>!
+  var observer: TestableObserver<CounterState>!
+
+  override func setUp() {
+    super.setUp()
+    incrementEvents = PublishRelay()
+    decrementClicks = PublishRelay()
+    let intentions = CounterIntentions(incrementEvents.asObservable(),
+                                       decrementClicks.asObservable())
+    observer = TestScheduler(initialClock: 0)
+      .createObserver(CounterState.self)
+
+    CounterModel
+      .bind(intentions)
+      .subscribe(observer)
+      .disposed(by: disposeBag)
+  }
 //  func testShouldEmitInitialState_whenCreated() {
 //    // Setup
 //    let incrementClicks = PublishRelay<Void>()
@@ -36,19 +54,6 @@ class CounterModelTests: XCTestCase {
 //  }
 
   func testShouldIncreaseCountAndClicks_whenUserTapsPlusButton() {
-    // Setup
-    let incrementEvents = PublishRelay<Void>()
-    let decrementClicks = PublishRelay<Void>()
-    let intentions = CounterIntentions(incrementEvents.asObservable(),
-                                       decrementClicks.asObservable())
-    let observer = TestScheduler(initialClock: 0)
-      .createObserver(CounterState.self)
-
-    CounterModel
-      .bind(intentions)
-      .subscribe(observer)
-      .disposed(by: disposeBag)
-
     // Act
     incrementEvents.accept(())
 
@@ -60,19 +65,6 @@ class CounterModelTests: XCTestCase {
   }
 
   func testShouldDecreaseCountAndIncrementClicks_whenUSerTapsMinusButton() {
-    // Setup
-    let incrementClicks = PublishRelay<Void>()
-    let decrementClicks = PublishRelay<Void>()
-    let intentions = CounterIntentions(incrementClicks.asObservable(),
-                                       decrementClicks.asObservable())
-    let observer = TestScheduler(initialClock: 0)
-      .createObserver(CounterState.self)
-
-    CounterModel
-      .bind(intentions)
-      .subscribe(observer)
-      .disposed(by: disposeBag)
-
     // Act
     decrementClicks.accept(())
 
