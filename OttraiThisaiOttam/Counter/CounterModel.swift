@@ -9,7 +9,13 @@
 import RxSwift
 
 class CounterModel {
-  static func bind() -> Observable<CounterState> {
-    return Observable.just(CounterState(count: 0, clicks: 0))
+  static func bind(_ intentions: CounterIntentions) -> Observable<CounterState> {
+    return Observable
+      .merge(intentions.increment(), intentions.decrement())
+      .scan(CounterState()) { (oldState, newValue) in
+        let clicks = oldState.clicks + 1
+        let count = oldState.count + newValue
+        return CounterState(count: count, clicks: clicks)
+    }
   }
 }
