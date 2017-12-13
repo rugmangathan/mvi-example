@@ -34,24 +34,6 @@ class CounterModelTests: XCTestCase {
       .subscribe(observer)
       .disposed(by: disposeBag)
   }
-//  func testShouldEmitInitialState_whenCreated() {
-//    // Setup
-//    let incrementClicks = PublishRelay<Void>()
-//    let intentions = CounterIntentions(incrementClicks.asObservable())
-//    let observer = TestScheduler(initialClock: 0)
-//      .createObserver(CounterState.self)
-//
-//    CounterModel
-//      .bind(intentions)
-//      .subscribe(observer)
-//      .disposed(by: disposeBag)
-//
-//    // Assert
-//    let expectedEvents = [
-//      next(0, CounterState(count: 0, clicks: 0))
-//    ]
-//    XCTAssertEqual(observer.events, expectedEvents)
-//  }
 
   func testShouldIncreaseCountAndClicks_whenUserTapsPlusButton() {
     // Act
@@ -63,7 +45,7 @@ class CounterModelTests: XCTestCase {
     ]
     XCTAssertEqual(observer.events, expectedEvents)
   }
-
+ 
   func testShouldDecreaseCountAndIncrementClicks_whenUSerTapsMinusButton() {
     // Act
     decrementClicks.accept(())
@@ -71,6 +53,19 @@ class CounterModelTests: XCTestCase {
     // Assert
     let expectedEvents = [
       next(0, CounterState(count: -1, clicks: 1))
+    ]
+    XCTAssertEqual(observer.events, expectedEvents)
+  }
+
+  func testShouldEmitZeroCount_whenUserTapsOneIncrementAndDecrementClicks() {
+    // Act
+    incrementEvents.accept(())
+    decrementClicks.accept(())
+
+    // Assert
+    let expectedEvents = [
+      next(0, CounterState(count: 1, clicks: 1)),
+      next(0, CounterState(count: 0, clicks: 2))
     ]
     XCTAssertEqual(observer.events, expectedEvents)
   }
