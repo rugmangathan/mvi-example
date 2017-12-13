@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		0E22BED5712FFDD0F076EEF3 /* Pods_OttraiThisaiOttam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131D9DD6D8E12AE07203B402 /* Pods_OttraiThisaiOttam.framework */; };
 		D21B4E43724DF0B65F1EFE4A /* Pods_OttraiThisaiOttamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8417414527CB1684338395 /* Pods_OttraiThisaiOttamTests.framework */; };
+		F40A33001FE16B6C00D06DBB /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40A32FF1FE16B6C00D06DBB /* CounterView.swift */; };
+		F40A33021FE16BB100D06DBB /* CounterViewRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40A33011FE16BB100D06DBB /* CounterViewRenderer.swift */; };
+		F40A33041FE16C4800D06DBB /* SpyableCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40A33031FE16C4800D06DBB /* SpyableCounterView.swift */; };
+		F40A33071FE16F3D00D06DBB /* CounterViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40A33061FE16F3D00D06DBB /* CounterViewTests.swift */; };
 		F40F046E1FDFDAF100390991 /* CounterIntentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40F046C1FDFDA1200390991 /* CounterIntentions.swift */; };
 		F413CBF71FDD3AB8002DBC72 /* BudapestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413CBF21FDD3AB8002DBC72 /* BudapestViewController.swift */; };
 		F413CBF81FDD3AB8002DBC72 /* BudapestIntentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413CBF31FDD3AB8002DBC72 /* BudapestIntentions.swift */; };
@@ -55,6 +59,10 @@
 		8F54B9803D3F768B0E66E701 /* Pods-OttraiThisaiOttamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OttraiThisaiOttamTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OttraiThisaiOttamTests/Pods-OttraiThisaiOttamTests.release.xcconfig"; sourceTree = "<group>"; };
 		94A983DC604214B43E2F93B1 /* Pods-OttraiThisaiOttam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OttraiThisaiOttam.release.xcconfig"; path = "Pods/Target Support Files/Pods-OttraiThisaiOttam/Pods-OttraiThisaiOttam.release.xcconfig"; sourceTree = "<group>"; };
 		9966FB95DCCB4CC1FA71A54C /* Pods-OttraiThisaiOttamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OttraiThisaiOttamTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OttraiThisaiOttamTests/Pods-OttraiThisaiOttamTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F40A32FF1FE16B6C00D06DBB /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		F40A33011FE16BB100D06DBB /* CounterViewRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewRenderer.swift; sourceTree = "<group>"; };
+		F40A33031FE16C4800D06DBB /* SpyableCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyableCounterView.swift; sourceTree = "<group>"; };
+		F40A33061FE16F3D00D06DBB /* CounterViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewTests.swift; sourceTree = "<group>"; };
 		F40F046C1FDFDA1200390991 /* CounterIntentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CounterIntentions.swift; path = OttraiThisaiOttam/Counter/CounterIntentions.swift; sourceTree = SOURCE_ROOT; };
 		F413CBF21FDD3AB8002DBC72 /* BudapestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudapestViewController.swift; sourceTree = "<group>"; };
 		F413CBF31FDD3AB8002DBC72 /* BudapestIntentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudapestIntentions.swift; sourceTree = "<group>"; };
@@ -221,6 +229,8 @@
 		F4B9566B1FDEB10D00DA4E6C /* Counter */ = {
 			isa = PBXGroup;
 			children = (
+				F40A32FF1FE16B6C00D06DBB /* CounterView.swift */,
+				F40A33011FE16BB100D06DBB /* CounterViewRenderer.swift */,
 				F4B956711FDEB66B00DA4E6C /* CounterState.swift */,
 				F4B956731FDEB83200DA4E6C /* CounterModel.swift */,
 				F40F046C1FDFDA1200390991 /* CounterIntentions.swift */,
@@ -232,6 +242,8 @@
 			isa = PBXGroup;
 			children = (
 				F4B9566F1FDEB19F00DA4E6C /* CounterModelTests.swift */,
+				F40A33061FE16F3D00D06DBB /* CounterViewTests.swift */,
+				F40A33031FE16C4800D06DBB /* SpyableCounterView.swift */,
 			);
 			path = Counter;
 			sourceTree = "<group>";
@@ -494,7 +506,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Define output file. Change \"$PROJECT_DIR/Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"$PROJECT_DIR/OttraiThisaiOttamTests/Mocks/GeneratedMocks.swift\"\necho \"Generated Mocks File = $OUTPUT_FILE\"\n\n# Define input directory. Change \"$PROJECT_DIR\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"$PROJECT_DIR\"\necho \"Mocks Input Directory = $INPUT_DIR\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n${PODS_ROOT}/Cuckoo/run generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"$INPUT_DIR/OttraiThisaiOttamTests/Budapest/SpyableBudapestView.swift\"\n# ... and so forth\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.";
+			shellScript = "# Define output file. Change \"$PROJECT_DIR/Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"$PROJECT_DIR/OttraiThisaiOttamTests/Mocks/GeneratedMocks.swift\"\necho \"Generated Mocks File = $OUTPUT_FILE\"\n\n# Define input directory. Change \"$PROJECT_DIR\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"$PROJECT_DIR\"\necho \"Mocks Input Directory = $INPUT_DIR\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n${PODS_ROOT}/Cuckoo/run generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"$INPUT_DIR/OttraiThisaiOttamTests/Budapest/SpyableBudapestView.swift\" \\\n\"$INPUT_DIR/OttraiThisaiOttamTests/Counter/SpyableCounterView.swift\"\n# ... and so forth\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -509,9 +521,11 @@
 				F413CBFA1FDD3AB8002DBC72 /* BudapestModel.swift in Sources */,
 				F413CBFB1FDD3AB8002DBC72 /* BudapestState.swift in Sources */,
 				F413CBF71FDD3AB8002DBC72 /* BudapestViewController.swift in Sources */,
+				F40A33001FE16B6C00D06DBB /* CounterView.swift in Sources */,
 				F4B956721FDEB66B00DA4E6C /* CounterState.swift in Sources */,
 				F40F046E1FDFDAF100390991 /* CounterIntentions.swift in Sources */,
 				F4B650141FDD336D00EC4972 /* AppDelegate.swift in Sources */,
+				F40A33021FE16BB100D06DBB /* CounterViewRenderer.swift in Sources */,
 				F4B956741FDEB83200DA4E6C /* CounterModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,7 +539,9 @@
 				F413CBFE1FDD3B19002DBC72 /* BudapestModelTests.swift in Sources */,
 				F454A6B61FDE7E860010DD98 /* SpyableBudapestView.swift in Sources */,
 				F4B956701FDEB1A000DA4E6C /* CounterModelTests.swift in Sources */,
+				F40A33041FE16C4800D06DBB /* SpyableCounterView.swift in Sources */,
 				F454A6BB1FDE80B90010DD98 /* GeneratedMocks.swift in Sources */,
+				F40A33071FE16F3D00D06DBB /* CounterViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
