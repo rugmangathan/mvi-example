@@ -36,4 +36,13 @@ class DisplayNameTests: XCTestCase {
     let expected = "Rugmangathan"
     XCTAssertEqual(BudapestModel().toDisplayName(actual), expected)
   }
+
+  func testShouldRemoveExtraWhitespacesInBetweenName_whenNameHasMoreThanOneWhiteSpacesInBetween() {
+    // Setup
+    let actual = "Rugmangathan   M K"
+
+    // Assert
+    let expected = "Rugmangathan M K"
+    XCTAssertEqual(BudapestModel().toDisplayName(actual), expected)
+  }
 }
