@@ -33,6 +33,7 @@
 		F4B956701FDEB1A000DA4E6C /* CounterModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B9566F1FDEB19F00DA4E6C /* CounterModelTests.swift */; };
 		F4B956721FDEB66B00DA4E6C /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B956711FDEB66B00DA4E6C /* CounterState.swift */; };
 		F4B956741FDEB83200DA4E6C /* CounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B956731FDEB83200DA4E6C /* CounterModel.swift */; };
+		F4EA8ACE1FFB8C71003D4AFD /* DisplayNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EA8ACD1FFB8C71003D4AFD /* DisplayNameTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		F4B9566F1FDEB19F00DA4E6C /* CounterModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterModelTests.swift; sourceTree = "<group>"; };
 		F4B956711FDEB66B00DA4E6C /* CounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
 		F4B956731FDEB83200DA4E6C /* CounterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterModel.swift; sourceTree = "<group>"; };
+		F4EA8ACD1FFB8C71003D4AFD /* DisplayNameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayNameTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 			children = (
 				F413CBFD1FDD3B19002DBC72 /* BudapestModelTests.swift */,
 				F454A6B31FDE7E0E0010DD98 /* BudapestViewTests.swift */,
+				F4EA8ACD1FFB8C71003D4AFD /* DisplayNameTests.swift */,
 				F454A6B51FDE7E860010DD98 /* SpyableBudapestView.swift */,
 			);
 			path = Budapest;
@@ -542,6 +545,7 @@
 				F40A33041FE16C4800D06DBB /* SpyableCounterView.swift in Sources */,
 				F454A6BB1FDE80B90010DD98 /* GeneratedMocks.swift in Sources */,
 				F40A33071FE16F3D00D06DBB /* CounterViewTests.swift in Sources */,
+				F4EA8ACE1FFB8C71003D4AFD /* DisplayNameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
