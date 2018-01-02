@@ -23,6 +23,10 @@ class BudapestViewController: UIViewController {
     )
   }()
 
+  private lazy var viewRenderer: BudapestViewRenderer = {
+    return BudapestViewRenderer(self)
+  }()
+
   private let disposeBag = DisposeBag()
   private let greetText = "Hello,"
   private let strangerText = "Stranger"
@@ -33,7 +37,7 @@ class BudapestViewController: UIViewController {
     BudapestModel()
       .bind(intentions: intentions)
       .subscribe (onNext: { state in
-        BudapestViewRenderer(self).render(state)
+        self.viewRenderer.render(state)
       })
       .disposed(by: disposeBag)
   }
