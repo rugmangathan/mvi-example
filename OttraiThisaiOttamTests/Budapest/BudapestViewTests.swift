@@ -11,13 +11,13 @@ import Cuckoo
 @testable import OttraiThisaiOttam
 
 class BudapestViewTests: XCTestCase {
-  var spyView: MockSpyableBudapestView!
+  var view: MockSpyableBudapestView!
   var renderer: BudapestViewRenderer!
 
   override func setUp() {
-    spyView = MockSpyableBudapestView()
+    view = MockSpyableBudapestView()
       .spy(on: SpyableBudapestView())
-    renderer = BudapestViewRenderer(spyView)
+    renderer = BudapestViewRenderer(view)
   }
 
   func testRenderGreetStranger() {
@@ -25,9 +25,9 @@ class BudapestViewTests: XCTestCase {
     renderer.render(BudapestState(""))
 
     // Assert
-    verify(spyView, times(1)).greetStranger()
+    verify(view, times(1)).greetStranger()
 
-    verify(spyView, never()).greet(any())
+    verify(view, never()).greet(any())
   }
 
   func testRenderGreetingState() {
@@ -35,8 +35,8 @@ class BudapestViewTests: XCTestCase {
     renderer.render(BudapestState("Rugmangathan"))
 
     // Assert
-    verify(spyView, times(1)).greet("Rugmangathan")
+    verify(view, times(1)).greet("Rugmangathan")
 
-    verify(spyView, never()).greetStranger()
+    verify(view, never()).greetStranger()
   }
 }

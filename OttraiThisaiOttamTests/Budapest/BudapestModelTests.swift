@@ -15,19 +15,23 @@ import RxCocoa
 @testable import OttraiThisaiOttam
 
 class BudapestModelTests: XCTestCase {
-  let disposeBag = DisposeBag()
+  var disposable: Disposable!
   var testObserver: TestableObserver<BudapestState>!
-  var nameChanges: PublishRelay<String?>!
+  var nameChanges: PublishRelay<String>!
 
   override func setUp() {
     super.setUp()
     testObserver = TestScheduler(initialClock: 0).createObserver(BudapestState.self)
-    nameChanges = PublishRelay<String?>()
-    let intentions = BudapestIntentions(textFieldChanges: nameChanges.asObservable())
-    BudapestModel()
+    nameChanges = PublishRelay<String>()
+    let intentions = BudapestIntentions(nameChanges.asObservable())
+    disposable = BudapestModel()
       .bind(intentions: intentions)
       .subscribe(testObserver)
-      .disposed(by: disposeBag)
+  }
+
+  override func tearDown() {
+    disposable.dispose()
+    super.tearDown()
   }
 
   func testShouldEmitStrangerState_whenNameIsEmpty() {
@@ -36,7 +40,7 @@ class BudapestModelTests: XCTestCase {
 
     // Assert
     let expectedEvent = [
-      next(0, BudapestState("")),
+      next(0, BudapestState(""))
     ]
     XCTAssertEqual(testObserver.events, expectedEvent)
   }

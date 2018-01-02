@@ -10,7 +10,7 @@ import RxSwift
 class BudapestModel {
   func bind(intentions: BudapestIntentions) -> Observable<BudapestState> {
     return intentions
-      .textChanges()
+      .enterName()
       .map { self.toDisplayName($0) }
       .map { BudapestState($0) }
   }

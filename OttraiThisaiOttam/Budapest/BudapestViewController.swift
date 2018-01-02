@@ -14,8 +14,15 @@ class BudapestViewController: UIViewController {
   @IBOutlet weak var greetingLabel: UILabel!
 
   private lazy var intentions: BudapestIntentions = {
-    return BudapestIntentions(textFieldChanges: nameTextField.rx.text.asObservable())
+    return BudapestIntentions(
+      nameTextField.rx
+        .text
+        .asObservable()
+        .filter { $0 != nil }
+        .map { $0! }
+    )
   }()
+
   private let disposeBag = DisposeBag()
   private let greetText = "Hello,"
   private let strangerText = "Stranger"

@@ -14,7 +14,7 @@ class BudapestState: Equatable {
     self.name = message
   }
 
-  static func ==(lhs: BudapestState, rhs: BudapestState) -> Bool {
+  static func == (lhs: BudapestState, rhs: BudapestState) -> Bool {
     return lhs.name == rhs.name
   }
 }

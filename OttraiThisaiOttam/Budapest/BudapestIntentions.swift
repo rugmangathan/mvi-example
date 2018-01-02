@@ -8,15 +8,13 @@
 import RxSwift
 
 class BudapestIntentions {
-  let textFieldChanges: Observable<String?>
+  let nameTextFieldChanges: Observable<String>
   
-  init(textFieldChanges: Observable<String?>) {
-    self.textFieldChanges = textFieldChanges
+  init(_ nameTextFieldChanges: Observable<String>) {
+    self.nameTextFieldChanges = nameTextFieldChanges
   }
   
-  func textChanges() -> Observable<String> {
-    return textFieldChanges
-      .filter { $0 != nil }
-      .map { $0! }
+  func enterName() -> Observable<String> {
+    return nameTextFieldChanges
   }
 }
