@@ -34,6 +34,8 @@
 		F4B956721FDEB66B00DA4E6C /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B956711FDEB66B00DA4E6C /* CounterState.swift */; };
 		F4B956741FDEB83200DA4E6C /* CounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B956731FDEB83200DA4E6C /* CounterModel.swift */; };
 		F4EA8ACE1FFB8C71003D4AFD /* DisplayNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EA8ACD1FFB8C71003D4AFD /* DisplayNameTests.swift */; };
+		F4EA8AD01FFB9482003D4AFD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4EA8ACF1FFB9482003D4AFD /* Localizable.strings */; };
+		F4EA8AD31FFB9508003D4AFD /* Strings+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EA8AD21FFB9508003D4AFD /* Strings+Ex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		F4B956711FDEB66B00DA4E6C /* CounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
 		F4B956731FDEB83200DA4E6C /* CounterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterModel.swift; sourceTree = "<group>"; };
 		F4EA8ACD1FFB8C71003D4AFD /* DisplayNameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayNameTests.swift; sourceTree = "<group>"; };
+		F4EA8ACF1FFB9482003D4AFD /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		F4EA8AD21FFB9508003D4AFD /* Strings+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+Ex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +201,7 @@
 		F4B650121FDD336D00EC4972 /* OttraiThisaiOttam */ = {
 			isa = PBXGroup;
 			children = (
+				F4EA8AD11FFB9492003D4AFD /* Extensions */,
 				F413CBF11FDD3A9D002DBC72 /* Budapest */,
 				F4B9566B1FDEB10D00DA4E6C /* Counter */,
 				F4B650131FDD336D00EC4972 /* AppDelegate.swift */,
@@ -204,6 +209,7 @@
 				F4B6501A1FDD336D00EC4972 /* Assets.xcassets */,
 				F4B6501C1FDD336D00EC4972 /* LaunchScreen.storyboard */,
 				F4B6501F1FDD336D00EC4972 /* Info.plist */,
+				F4EA8ACF1FFB9482003D4AFD /* Localizable.strings */,
 			);
 			path = OttraiThisaiOttam;
 			sourceTree = "<group>";
@@ -249,6 +255,14 @@
 				F40A33031FE16C4800D06DBB /* SpyableCounterView.swift */,
 			);
 			path = Counter;
+			sourceTree = "<group>";
+		};
+		F4EA8AD11FFB9492003D4AFD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F4EA8AD21FFB9508003D4AFD /* Strings+Ex.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4B6501E1FDD336D00EC4972 /* LaunchScreen.storyboard in Resources */,
+				F4EA8AD01FFB9482003D4AFD /* Localizable.strings in Resources */,
 				F4B6501B1FDD336D00EC4972 /* Assets.xcassets in Resources */,
 				F4B650191FDD336D00EC4972 /* Main.storyboard in Resources */,
 			);
@@ -526,6 +541,7 @@
 				F413CBF71FDD3AB8002DBC72 /* BudapestViewController.swift in Sources */,
 				F40A33001FE16B6C00D06DBB /* CounterView.swift in Sources */,
 				F4B956721FDEB66B00DA4E6C /* CounterState.swift in Sources */,
+				F4EA8AD31FFB9508003D4AFD /* Strings+Ex.swift in Sources */,
 				F40F046E1FDFDAF100390991 /* CounterIntentions.swift in Sources */,
 				F4B650141FDD336D00EC4972 /* AppDelegate.swift in Sources */,
 				F40A33021FE16BB100D06DBB /* CounterViewRenderer.swift in Sources */,

@@ -28,8 +28,6 @@ class BudapestViewController: UIViewController {
   }()
 
   private let disposeBag = DisposeBag()
-  private let greetText = "Hello,"
-  private let strangerText = "Stranger"
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -45,10 +43,10 @@ class BudapestViewController: UIViewController {
 
 extension BudapestViewController: BudapestView {
   func greetStranger() {
-    greetingLabel.text = "\(greetText) \(strangerText)"
+    greetingLabel.text = String(format: "Greet".localized(), "Stranger".localized())
   }
 
   func greet(_ message: String) {
-    greetingLabel.text = "\(greetText) \(message)"
+    greetingLabel.text = String(format: "Greet".localized(), message)
   }
 }
