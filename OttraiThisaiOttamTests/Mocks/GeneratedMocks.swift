@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: OttraiThisaiOttamTests/Counter/SpyableCounterView.swift at 2018-01-02 11:09:25 +0000
+// MARK: - Mocks generated from file: OttraiThisaiOttamTests/Counter/SpyableCounterView.swift at 2018-01-04 10:10:47 +0000
 
 //
 //  SpyableCounterView.swift
@@ -102,7 +102,7 @@ class MockSpyableCounterView: SpyableCounterView, Cuckoo.Mock {
 
 
 
-// MARK: - Mocks generated from file: OttraiThisaiOttamTests/Budapest/SpyableBudapestView.swift at 2018-01-02 11:09:25 +0000
+// MARK: - Mocks generated from file: OttraiThisaiOttamTests/Budapest/SpyableBudapestView.swift at 2018-01-04 10:10:47 +0000
 
 //
 //  SpyableBudapestView.swift

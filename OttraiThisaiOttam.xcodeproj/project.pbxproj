@@ -20,6 +20,8 @@
 		F413CBFA1FDD3AB8002DBC72 /* BudapestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413CBF51FDD3AB8002DBC72 /* BudapestModel.swift */; };
 		F413CBFB1FDD3AB8002DBC72 /* BudapestState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413CBF61FDD3AB8002DBC72 /* BudapestState.swift */; };
 		F413CBFE1FDD3B19002DBC72 /* BudapestModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413CBFD1FDD3B19002DBC72 /* BudapestModelTests.swift */; };
+		F439D5FE1FFE1D3D000D1160 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439D5FD1FFE1D3D000D1160 /* CounterViewController.swift */; };
+		F439D6001FFE31CB000D1160 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439D5FF1FFE31CB000D1160 /* HomeViewController.swift */; };
 		F454A6B41FDE7E0E0010DD98 /* BudapestViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454A6B31FDE7E0E0010DD98 /* BudapestViewTests.swift */; };
 		F454A6B61FDE7E860010DD98 /* SpyableBudapestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454A6B51FDE7E860010DD98 /* SpyableBudapestView.swift */; };
 		F454A6BB1FDE80B90010DD98 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454A6BA1FDE80B90010DD98 /* GeneratedMocks.swift */; };
@@ -73,6 +75,8 @@
 		F413CBF51FDD3AB8002DBC72 /* BudapestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudapestModel.swift; sourceTree = "<group>"; };
 		F413CBF61FDD3AB8002DBC72 /* BudapestState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudapestState.swift; sourceTree = "<group>"; };
 		F413CBFD1FDD3B19002DBC72 /* BudapestModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudapestModelTests.swift; sourceTree = "<group>"; };
+		F439D5FD1FFE1D3D000D1160 /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
+		F439D5FF1FFE31CB000D1160 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F454A6B31FDE7E0E0010DD98 /* BudapestViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudapestViewTests.swift; sourceTree = "<group>"; };
 		F454A6B51FDE7E860010DD98 /* SpyableBudapestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyableBudapestView.swift; sourceTree = "<group>"; };
 		F454A6BA1FDE80B90010DD98 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
@@ -205,6 +209,7 @@
 				F413CBF11FDD3A9D002DBC72 /* Budapest */,
 				F4B9566B1FDEB10D00DA4E6C /* Counter */,
 				F4B650131FDD336D00EC4972 /* AppDelegate.swift */,
+				F439D5FF1FFE31CB000D1160 /* HomeViewController.swift */,
 				F4B650171FDD336D00EC4972 /* Main.storyboard */,
 				F4B6501A1FDD336D00EC4972 /* Assets.xcassets */,
 				F4B6501C1FDD336D00EC4972 /* LaunchScreen.storyboard */,
@@ -243,6 +248,7 @@
 				F4B956711FDEB66B00DA4E6C /* CounterState.swift */,
 				F4B956731FDEB83200DA4E6C /* CounterModel.swift */,
 				F40F046C1FDFDA1200390991 /* CounterIntentions.swift */,
+				F439D5FD1FFE1D3D000D1160 /* CounterViewController.swift */,
 			);
 			path = Counter;
 			sourceTree = "<group>";
@@ -538,10 +544,12 @@
 				F454A6BD1FDE81370010DD98 /* BudapestViewRenderer.swift in Sources */,
 				F413CBFA1FDD3AB8002DBC72 /* BudapestModel.swift in Sources */,
 				F413CBFB1FDD3AB8002DBC72 /* BudapestState.swift in Sources */,
+				F439D6001FFE31CB000D1160 /* HomeViewController.swift in Sources */,
 				F413CBF71FDD3AB8002DBC72 /* BudapestViewController.swift in Sources */,
 				F40A33001FE16B6C00D06DBB /* CounterView.swift in Sources */,
 				F4B956721FDEB66B00DA4E6C /* CounterState.swift in Sources */,
 				F4EA8AD31FFB9508003D4AFD /* Strings+Ex.swift in Sources */,
+				F439D5FE1FFE1D3D000D1160 /* CounterViewController.swift in Sources */,
 				F40F046E1FDFDAF100390991 /* CounterIntentions.swift in Sources */,
 				F4B650141FDD336D00EC4972 /* AppDelegate.swift in Sources */,
 				F40A33021FE16BB100D06DBB /* CounterViewRenderer.swift in Sources */,
