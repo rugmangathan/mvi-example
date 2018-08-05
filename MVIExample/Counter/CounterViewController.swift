@@ -1,6 +1,6 @@
 //
 //  CounterViewController.swift
-//  OttraiThisaiOttam
+//  MVIExample
 //
 //  Created by Rugmangathan on 04/01/18.
 //  Copyright © 2018 Rugmangathan. All rights reserved.

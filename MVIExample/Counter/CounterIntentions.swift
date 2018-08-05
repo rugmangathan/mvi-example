@@ -1,6 +1,6 @@
 //
 //  CounterIntentions.swift
-//  OttraiThisaiOttamTests
+//  MVIExampleTests
 //
 //  Created by Rugmangathan on 12/12/17.
 //  Copyright © 2017 Rugmangathan. All rights reserved.

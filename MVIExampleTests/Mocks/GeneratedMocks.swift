@@ -1,8 +1,8 @@
-// MARK: - Mocks generated from file: MVIExampleTests/Budapest/SpyableBudapestView.swift at 2018-08-05 07:08:39 +0000
+// MARK: - Mocks generated from file: MVIExampleTests/Budapest/SpyableBudapestView.swift at 2018-08-05 07:19:09 +0000
 
 //
 //  SpyableBudapestView.swift
-//  OttraiThisaiOttamTests
+//  MVIExampleTests
 //
 //  Created by Rugmangathan on 11/12/17.
 //  Copyright © 2017 Rugmangathan. All rights reserved.
@@ -37,7 +37,7 @@ class MockSpyableBudapestView: SpyableBudapestView, Cuckoo.ClassMock {
         
     }
     
-    // ["name": "greet", "returnSignature": "", "fullyQualifiedName": "greet(_: String)", "parameterSignature": "_ message: String", "parameterSignatureWithoutNames": "message: String", "inputTypes": "String", "isThrowing": false, "isInit": false, "isOverriding": true, "hasClosureParams": false, "@type": "ClassMethod", "accessibility": "", "parameterNames": "message", "call": "message", "parameters": [CuckooGeneratorFramework.MethodParameter(label: nil, name: "message", type: "String", range: CountableRange(293..<310), nameRange: CountableRange(0..<0))], "returnType": "Void", "isOptional": false, "stubFunction": "Cuckoo.ClassStubNoReturnFunction"]
+    // ["name": "greet", "returnSignature": "", "fullyQualifiedName": "greet(_: String)", "parameterSignature": "_ message: String", "parameterSignatureWithoutNames": "message: String", "inputTypes": "String", "isThrowing": false, "isInit": false, "isOverriding": true, "hasClosureParams": false, "@type": "ClassMethod", "accessibility": "", "parameterNames": "message", "call": "message", "parameters": [CuckooGeneratorFramework.MethodParameter(label: nil, name: "message", type: "String", range: CountableRange(286..<303), nameRange: CountableRange(0..<0))], "returnType": "Void", "isOptional": false, "stubFunction": "Cuckoo.ClassStubNoReturnFunction"]
      override func greet(_ message: String)  {
         
             return cuckoo_manager.call("greet(_: String)",
@@ -117,11 +117,11 @@ class MockSpyableBudapestView: SpyableBudapestView, Cuckoo.ClassMock {
 }
 
 
-// MARK: - Mocks generated from file: MVIExampleTests/Counter/SpyableCounterView.swift at 2018-08-05 07:08:39 +0000
+// MARK: - Mocks generated from file: MVIExampleTests/Counter/SpyableCounterView.swift at 2018-08-05 07:19:09 +0000
 
 //
 //  SpyableCounterView.swift
-//  OttraiThisaiOttamTests
+//  MVIExampleTests
 //
 //  Created by Rugmangathan on 13/12/17.
 //  Copyright © 2017 Rugmangathan. All rights reserved.
@@ -144,7 +144,7 @@ class MockSpyableCounterView: SpyableCounterView, Cuckoo.ClassMock {
     
 
     
-    // ["name": "showCounterValues", "returnSignature": "", "fullyQualifiedName": "showCounterValues(_: Int64, _: Int64)", "parameterSignature": "_ count: Int64, _ clicks: Int64", "parameterSignatureWithoutNames": "count: Int64, clicks: Int64", "inputTypes": "Int64, Int64", "isThrowing": false, "isInit": false, "isOverriding": true, "hasClosureParams": false, "@type": "ClassMethod", "accessibility": "", "parameterNames": "count, clicks", "call": "count, clicks", "parameters": [CuckooGeneratorFramework.MethodParameter(label: nil, name: "count", type: "Int64", range: CountableRange(276..<290), nameRange: CountableRange(0..<0)), CuckooGeneratorFramework.MethodParameter(label: nil, name: "clicks", type: "Int64", range: CountableRange(292..<307), nameRange: CountableRange(0..<0))], "returnType": "Void", "isOptional": false, "stubFunction": "Cuckoo.ClassStubNoReturnFunction"]
+    // ["name": "showCounterValues", "returnSignature": "", "fullyQualifiedName": "showCounterValues(_: Int64, _: Int64)", "parameterSignature": "_ count: Int64, _ clicks: Int64", "parameterSignatureWithoutNames": "count: Int64, clicks: Int64", "inputTypes": "Int64, Int64", "isThrowing": false, "isInit": false, "isOverriding": true, "hasClosureParams": false, "@type": "ClassMethod", "accessibility": "", "parameterNames": "count, clicks", "call": "count, clicks", "parameters": [CuckooGeneratorFramework.MethodParameter(label: nil, name: "count", type: "Int64", range: CountableRange(269..<283), nameRange: CountableRange(0..<0)), CuckooGeneratorFramework.MethodParameter(label: nil, name: "clicks", type: "Int64", range: CountableRange(285..<300), nameRange: CountableRange(0..<0))], "returnType": "Void", "isOptional": false, "stubFunction": "Cuckoo.ClassStubNoReturnFunction"]
      override func showCounterValues(_ count: Int64, _ clicks: Int64)  {
         
             return cuckoo_manager.call("showCounterValues(_: Int64, _: Int64)",

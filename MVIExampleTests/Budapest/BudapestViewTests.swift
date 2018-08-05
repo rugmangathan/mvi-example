@@ -1,6 +1,6 @@
 //
 //  BudapestViewTests.swift
-//  OttraiThisaiOttamTests
+//  MVIExampleTests
 //
 //  Created by Rugmangathan on 11/12/17.
 //  Copyright © 2017 Rugmangathan. All rights reserved.

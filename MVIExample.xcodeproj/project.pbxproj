@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0D724565DFC15C6BB9657DF2 /* Pods_MVIExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0940EE3971DBF251F8E53CF /* Pods_MVIExampleTests.framework */; };
-		0E22BED5712FFDD0F076EEF3 /* Pods_OttraiThisaiOttam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131D9DD6D8E12AE07203B402 /* Pods_OttraiThisaiOttam.framework */; };
 		16082D0D2116D5E700ABD572 /* CounterIntentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16082D0C2116D5E700ABD572 /* CounterIntentions.swift */; };
 		77F59224C72821863A9C4848 /* Pods_MVIExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EDD55AF90918E4706496E1 /* Pods_MVIExample.framework */; };
-		D21B4E43724DF0B65F1EFE4A /* Pods_OttraiThisaiOttamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8417414527CB1684338395 /* Pods_OttraiThisaiOttamTests.framework */; };
 		F40A33001FE16B6C00D06DBB /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40A32FF1FE16B6C00D06DBB /* CounterView.swift */; };
 		F40A33021FE16BB100D06DBB /* CounterViewRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40A33011FE16BB100D06DBB /* CounterViewRenderer.swift */; };
 		F40A33041FE16C4800D06DBB /* SpyableCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40A33031FE16C4800D06DBB /* SpyableCounterView.swift */; };
@@ -32,7 +30,7 @@
 		F4B650191FDD336D00EC4972 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B650171FDD336D00EC4972 /* Main.storyboard */; };
 		F4B6501B1FDD336D00EC4972 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4B6501A1FDD336D00EC4972 /* Assets.xcassets */; };
 		F4B6501E1FDD336D00EC4972 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B6501C1FDD336D00EC4972 /* LaunchScreen.storyboard */; };
-		F4B650341FDD336D00EC4972 /* OttraiThisaiOttamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B650331FDD336D00EC4972 /* OttraiThisaiOttamUITests.swift */; };
+		F4B650341FDD336D00EC4972 /* MVIExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B650331FDD336D00EC4972 /* MVIExampleUITests.swift */; };
 		F4B956701FDEB1A000DA4E6C /* CounterModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B9566F1FDEB19F00DA4E6C /* CounterModelTests.swift */; };
 		F4B956721FDEB66B00DA4E6C /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B956711FDEB66B00DA4E6C /* CounterState.swift */; };
 		F4B956741FDEB83200DA4E6C /* CounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B956731FDEB83200DA4E6C /* CounterModel.swift */; };
@@ -96,7 +94,7 @@
 		F4B650241FDD336D00EC4972 /* MVIExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVIExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B6502A1FDD336D00EC4972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4B6502F1FDD336D00EC4972 /* MVIExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVIExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4B650331FDD336D00EC4972 /* OttraiThisaiOttamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OttraiThisaiOttamUITests.swift; sourceTree = "<group>"; };
+		F4B650331FDD336D00EC4972 /* MVIExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVIExampleUITests.swift; sourceTree = "<group>"; };
 		F4B650351FDD336D00EC4972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4B9566F1FDEB19F00DA4E6C /* CounterModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterModelTests.swift; sourceTree = "<group>"; };
 		F4B956711FDEB66B00DA4E6C /* CounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E22BED5712FFDD0F076EEF3 /* Pods_OttraiThisaiOttam.framework in Frameworks */,
 				77F59224C72821863A9C4848 /* Pods_MVIExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,7 +118,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D21B4E43724DF0B65F1EFE4A /* Pods_OttraiThisaiOttamTests.framework in Frameworks */,
 				0D724565DFC15C6BB9657DF2 /* Pods_MVIExampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,7 +243,7 @@
 		F4B650321FDD336D00EC4972 /* MVIExampleUITests */ = {
 			isa = PBXGroup;
 			children = (
-				F4B650331FDD336D00EC4972 /* OttraiThisaiOttamUITests.swift */,
+				F4B650331FDD336D00EC4972 /* MVIExampleUITests.swift */,
 				F4B650351FDD336D00EC4972 /* Info.plist */,
 			);
 			path = MVIExampleUITests;
@@ -558,7 +554,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4B650341FDD336D00EC4972 /* OttraiThisaiOttamUITests.swift in Sources */,
+				F4B650341FDD336D00EC4972 /* MVIExampleUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

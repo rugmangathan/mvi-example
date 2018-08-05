@@ -1,6 +1,6 @@
 //
 //  Strings+Ex.swift
-//  OttraiThisaiOttam
+//  MVIExample
 //
 //  Created by Rugmangathan on 02/01/18.
 //  Copyright © 2018 Rugmangathan. All rights reserved.
