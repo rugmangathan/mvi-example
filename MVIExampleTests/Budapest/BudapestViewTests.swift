@@ -8,7 +8,7 @@
 
 import XCTest
 import Cuckoo
-@testable import OttraiThisaiOttam
+@testable import MVIExample
 
 class BudapestViewTests: XCTestCase {
   var view: MockSpyableBudapestView!

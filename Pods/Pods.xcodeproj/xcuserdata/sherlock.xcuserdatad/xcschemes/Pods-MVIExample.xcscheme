@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0124266F3969082577DFAA946F3B462F"
-               BuildableName = "Pods_OttraiThisaiOttamTests.framework"
-               BlueprintName = "Pods-OttraiThisaiOttamTests"
+               BlueprintIdentifier = "60BC5FF1DF93AD38AA4BBAAF489E1401"
+               BuildableName = "Pods_MVIExample.framework"
+               BlueprintName = "Pods-MVIExample"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0124266F3969082577DFAA946F3B462F"
-            BuildableName = "Pods_OttraiThisaiOttamTests.framework"
-            BlueprintName = "Pods-OttraiThisaiOttamTests"
+            BlueprintIdentifier = "60BC5FF1DF93AD38AA4BBAAF489E1401"
+            BuildableName = "Pods_MVIExample.framework"
+            BlueprintName = "Pods-MVIExample"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

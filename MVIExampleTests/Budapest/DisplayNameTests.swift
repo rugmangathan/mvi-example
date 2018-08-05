@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import OttraiThisaiOttam
+@testable import MVIExample
 
 class DisplayNameTests: XCTestCase {
   func testShouldRemoveWhitespaces_whenNameHasOnlyWhitespaces() {

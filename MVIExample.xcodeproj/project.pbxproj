@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D724565DFC15C6BB9657DF2 /* Pods_MVIExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0940EE3971DBF251F8E53CF /* Pods_MVIExampleTests.framework */; };
 		0E22BED5712FFDD0F076EEF3 /* Pods_OttraiThisaiOttam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131D9DD6D8E12AE07203B402 /* Pods_OttraiThisaiOttam.framework */; };
+		16082D0D2116D5E700ABD572 /* CounterIntentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16082D0C2116D5E700ABD572 /* CounterIntentions.swift */; };
+		77F59224C72821863A9C4848 /* Pods_MVIExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EDD55AF90918E4706496E1 /* Pods_MVIExample.framework */; };
 		D21B4E43724DF0B65F1EFE4A /* Pods_OttraiThisaiOttamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8417414527CB1684338395 /* Pods_OttraiThisaiOttamTests.framework */; };
 		F40A33001FE16B6C00D06DBB /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40A32FF1FE16B6C00D06DBB /* CounterView.swift */; };
 		F40A33021FE16BB100D06DBB /* CounterViewRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40A33011FE16BB100D06DBB /* CounterViewRenderer.swift */; };
 		F40A33041FE16C4800D06DBB /* SpyableCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40A33031FE16C4800D06DBB /* SpyableCounterView.swift */; };
 		F40A33071FE16F3D00D06DBB /* CounterViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40A33061FE16F3D00D06DBB /* CounterViewTests.swift */; };
-		F40F046E1FDFDAF100390991 /* CounterIntentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40F046C1FDFDA1200390991 /* CounterIntentions.swift */; };
 		F413CBF71FDD3AB8002DBC72 /* BudapestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413CBF21FDD3AB8002DBC72 /* BudapestViewController.swift */; };
 		F413CBF81FDD3AB8002DBC72 /* BudapestIntentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413CBF31FDD3AB8002DBC72 /* BudapestIntentions.swift */; };
 		F413CBF91FDD3AB8002DBC72 /* BudapestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413CBF41FDD3AB8002DBC72 /* BudapestView.swift */; };
@@ -30,7 +32,6 @@
 		F4B650191FDD336D00EC4972 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B650171FDD336D00EC4972 /* Main.storyboard */; };
 		F4B6501B1FDD336D00EC4972 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4B6501A1FDD336D00EC4972 /* Assets.xcassets */; };
 		F4B6501E1FDD336D00EC4972 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B6501C1FDD336D00EC4972 /* LaunchScreen.storyboard */; };
-		F4B650291FDD336D00EC4972 /* OttraiThisaiOttamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B650281FDD336D00EC4972 /* OttraiThisaiOttamTests.swift */; };
 		F4B650341FDD336D00EC4972 /* OttraiThisaiOttamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B650331FDD336D00EC4972 /* OttraiThisaiOttamUITests.swift */; };
 		F4B956701FDEB1A000DA4E6C /* CounterModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B9566F1FDEB19F00DA4E6C /* CounterModelTests.swift */; };
 		F4B956721FDEB66B00DA4E6C /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B956711FDEB66B00DA4E6C /* CounterState.swift */; };
@@ -59,16 +60,21 @@
 
 /* Begin PBXFileReference section */
 		131D9DD6D8E12AE07203B402 /* Pods_OttraiThisaiOttam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OttraiThisaiOttam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		16082D0C2116D5E700ABD572 /* CounterIntentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterIntentions.swift; sourceTree = "<group>"; };
+		23909B0DB7B9FF77AEC4F772 /* Pods-MVIExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVIExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVIExampleTests/Pods-MVIExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		3C8417414527CB1684338395 /* Pods_OttraiThisaiOttamTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OttraiThisaiOttamTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CAD6327925FE7DA0EAE4E27 /* Pods-OttraiThisaiOttam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OttraiThisaiOttam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OttraiThisaiOttam/Pods-OttraiThisaiOttam.debug.xcconfig"; sourceTree = "<group>"; };
+		621389532C9ED1351DBE8B5F /* Pods-MVIExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVIExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVIExampleTests/Pods-MVIExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F54B9803D3F768B0E66E701 /* Pods-OttraiThisaiOttamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OttraiThisaiOttamTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OttraiThisaiOttamTests/Pods-OttraiThisaiOttamTests.release.xcconfig"; sourceTree = "<group>"; };
 		94A983DC604214B43E2F93B1 /* Pods-OttraiThisaiOttam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OttraiThisaiOttam.release.xcconfig"; path = "Pods/Target Support Files/Pods-OttraiThisaiOttam/Pods-OttraiThisaiOttam.release.xcconfig"; sourceTree = "<group>"; };
 		9966FB95DCCB4CC1FA71A54C /* Pods-OttraiThisaiOttamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OttraiThisaiOttamTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OttraiThisaiOttamTests/Pods-OttraiThisaiOttamTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A0940EE3971DBF251F8E53CF /* Pods_MVIExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVIExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA9EF275A08231343E5C57CC /* Pods-MVIExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVIExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVIExample/Pods-MVIExample.release.xcconfig"; sourceTree = "<group>"; };
+		D3EDD55AF90918E4706496E1 /* Pods_MVIExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVIExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40A32FF1FE16B6C00D06DBB /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		F40A33011FE16BB100D06DBB /* CounterViewRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewRenderer.swift; sourceTree = "<group>"; };
 		F40A33031FE16C4800D06DBB /* SpyableCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyableCounterView.swift; sourceTree = "<group>"; };
 		F40A33061FE16F3D00D06DBB /* CounterViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewTests.swift; sourceTree = "<group>"; };
-		F40F046C1FDFDA1200390991 /* CounterIntentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CounterIntentions.swift; path = OttraiThisaiOttam/Counter/CounterIntentions.swift; sourceTree = SOURCE_ROOT; };
 		F413CBF21FDD3AB8002DBC72 /* BudapestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudapestViewController.swift; sourceTree = "<group>"; };
 		F413CBF31FDD3AB8002DBC72 /* BudapestIntentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudapestIntentions.swift; sourceTree = "<group>"; };
 		F413CBF41FDD3AB8002DBC72 /* BudapestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudapestView.swift; sourceTree = "<group>"; };
@@ -81,21 +87,21 @@
 		F454A6B51FDE7E860010DD98 /* SpyableBudapestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyableBudapestView.swift; sourceTree = "<group>"; };
 		F454A6BA1FDE80B90010DD98 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		F454A6BC1FDE81370010DD98 /* BudapestViewRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudapestViewRenderer.swift; sourceTree = "<group>"; };
-		F4B650101FDD336D00EC4972 /* OttraiThisaiOttam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OttraiThisaiOttam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4B650101FDD336D00EC4972 /* MVIExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVIExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B650131FDD336D00EC4972 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4B650181FDD336D00EC4972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F4B6501A1FDD336D00EC4972 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4B6501D1FDD336D00EC4972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4B6501F1FDD336D00EC4972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F4B650241FDD336D00EC4972 /* OttraiThisaiOttamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OttraiThisaiOttamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4B650281FDD336D00EC4972 /* OttraiThisaiOttamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OttraiThisaiOttamTests.swift; sourceTree = "<group>"; };
+		F4B650241FDD336D00EC4972 /* MVIExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVIExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B6502A1FDD336D00EC4972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F4B6502F1FDD336D00EC4972 /* OttraiThisaiOttamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OttraiThisaiOttamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4B6502F1FDD336D00EC4972 /* MVIExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVIExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B650331FDD336D00EC4972 /* OttraiThisaiOttamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OttraiThisaiOttamUITests.swift; sourceTree = "<group>"; };
 		F4B650351FDD336D00EC4972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4B9566F1FDEB19F00DA4E6C /* CounterModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterModelTests.swift; sourceTree = "<group>"; };
 		F4B956711FDEB66B00DA4E6C /* CounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
 		F4B956731FDEB83200DA4E6C /* CounterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterModel.swift; sourceTree = "<group>"; };
+		F4D1B6F6BF4FE4741556C1D1 /* Pods-MVIExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVIExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVIExample/Pods-MVIExample.debug.xcconfig"; sourceTree = "<group>"; };
 		F4EA8ACD1FFB8C71003D4AFD /* DisplayNameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayNameTests.swift; sourceTree = "<group>"; };
 		F4EA8ACF1FFB9482003D4AFD /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		F4EA8AD21FFB9508003D4AFD /* Strings+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+Ex.swift"; sourceTree = "<group>"; };
@@ -107,6 +113,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E22BED5712FFDD0F076EEF3 /* Pods_OttraiThisaiOttam.framework in Frameworks */,
+				77F59224C72821863A9C4848 /* Pods_MVIExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +122,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D21B4E43724DF0B65F1EFE4A /* Pods_OttraiThisaiOttamTests.framework in Frameworks */,
+				0D724565DFC15C6BB9657DF2 /* Pods_MVIExampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +141,8 @@
 			children = (
 				131D9DD6D8E12AE07203B402 /* Pods_OttraiThisaiOttam.framework */,
 				3C8417414527CB1684338395 /* Pods_OttraiThisaiOttamTests.framework */,
+				D3EDD55AF90918E4706496E1 /* Pods_MVIExample.framework */,
+				A0940EE3971DBF251F8E53CF /* Pods_MVIExampleTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -144,6 +154,10 @@
 				94A983DC604214B43E2F93B1 /* Pods-OttraiThisaiOttam.release.xcconfig */,
 				9966FB95DCCB4CC1FA71A54C /* Pods-OttraiThisaiOttamTests.debug.xcconfig */,
 				8F54B9803D3F768B0E66E701 /* Pods-OttraiThisaiOttamTests.release.xcconfig */,
+				F4D1B6F6BF4FE4741556C1D1 /* Pods-MVIExample.debug.xcconfig */,
+				AA9EF275A08231343E5C57CC /* Pods-MVIExample.release.xcconfig */,
+				621389532C9ED1351DBE8B5F /* Pods-MVIExampleTests.debug.xcconfig */,
+				23909B0DB7B9FF77AEC4F772 /* Pods-MVIExampleTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -183,9 +197,9 @@
 		F4B650071FDD336D00EC4972 = {
 			isa = PBXGroup;
 			children = (
-				F4B650121FDD336D00EC4972 /* OttraiThisaiOttam */,
-				F4B650271FDD336D00EC4972 /* OttraiThisaiOttamTests */,
-				F4B650321FDD336D00EC4972 /* OttraiThisaiOttamUITests */,
+				F4B650121FDD336D00EC4972 /* MVIExample */,
+				F4B650271FDD336D00EC4972 /* MVIExampleTests */,
+				F4B650321FDD336D00EC4972 /* MVIExampleUITests */,
 				F4B650111FDD336D00EC4972 /* Products */,
 				7F2C8A46CC123C1DCD0A152E /* Pods */,
 				464D77DC41DFE8837B3867BF /* Frameworks */,
@@ -195,14 +209,14 @@
 		F4B650111FDD336D00EC4972 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F4B650101FDD336D00EC4972 /* OttraiThisaiOttam.app */,
-				F4B650241FDD336D00EC4972 /* OttraiThisaiOttamTests.xctest */,
-				F4B6502F1FDD336D00EC4972 /* OttraiThisaiOttamUITests.xctest */,
+				F4B650101FDD336D00EC4972 /* MVIExample.app */,
+				F4B650241FDD336D00EC4972 /* MVIExampleTests.xctest */,
+				F4B6502F1FDD336D00EC4972 /* MVIExampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F4B650121FDD336D00EC4972 /* OttraiThisaiOttam */ = {
+		F4B650121FDD336D00EC4972 /* MVIExample */ = {
 			isa = PBXGroup;
 			children = (
 				F4EA8AD11FFB9492003D4AFD /* Extensions */,
@@ -216,28 +230,27 @@
 				F4B6501F1FDD336D00EC4972 /* Info.plist */,
 				F4EA8ACF1FFB9482003D4AFD /* Localizable.strings */,
 			);
-			path = OttraiThisaiOttam;
+			path = MVIExample;
 			sourceTree = "<group>";
 		};
-		F4B650271FDD336D00EC4972 /* OttraiThisaiOttamTests */ = {
+		F4B650271FDD336D00EC4972 /* MVIExampleTests */ = {
 			isa = PBXGroup;
 			children = (
 				F413CBFC1FDD3AF7002DBC72 /* Budapest */,
 				F4B9566C1FDEB14300DA4E6C /* Counter */,
 				F454A6B91FDE80950010DD98 /* Mocks */,
-				F4B650281FDD336D00EC4972 /* OttraiThisaiOttamTests.swift */,
 				F4B6502A1FDD336D00EC4972 /* Info.plist */,
 			);
-			path = OttraiThisaiOttamTests;
+			path = MVIExampleTests;
 			sourceTree = "<group>";
 		};
-		F4B650321FDD336D00EC4972 /* OttraiThisaiOttamUITests */ = {
+		F4B650321FDD336D00EC4972 /* MVIExampleUITests */ = {
 			isa = PBXGroup;
 			children = (
 				F4B650331FDD336D00EC4972 /* OttraiThisaiOttamUITests.swift */,
 				F4B650351FDD336D00EC4972 /* Info.plist */,
 			);
-			path = OttraiThisaiOttamUITests;
+			path = MVIExampleUITests;
 			sourceTree = "<group>";
 		};
 		F4B9566B1FDEB10D00DA4E6C /* Counter */ = {
@@ -247,7 +260,7 @@
 				F40A33011FE16BB100D06DBB /* CounterViewRenderer.swift */,
 				F4B956711FDEB66B00DA4E6C /* CounterState.swift */,
 				F4B956731FDEB83200DA4E6C /* CounterModel.swift */,
-				F40F046C1FDFDA1200390991 /* CounterIntentions.swift */,
+				16082D0C2116D5E700ABD572 /* CounterIntentions.swift */,
 				F439D5FD1FFE1D3D000D1160 /* CounterViewController.swift */,
 			);
 			path = Counter;
@@ -274,9 +287,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F4B6500F1FDD336D00EC4972 /* OttraiThisaiOttam */ = {
+		F4B6500F1FDD336D00EC4972 /* MVIExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F4B650381FDD336D00EC4972 /* Build configuration list for PBXNativeTarget "OttraiThisaiOttam" */;
+			buildConfigurationList = F4B650381FDD336D00EC4972 /* Build configuration list for PBXNativeTarget "MVIExample" */;
 			buildPhases = (
 				B24846E56EF051906702CDCD /* [CP] Check Pods Manifest.lock */,
 				F4B6500C1FDD336D00EC4972 /* Sources */,
@@ -289,14 +302,14 @@
 			);
 			dependencies = (
 			);
-			name = OttraiThisaiOttam;
+			name = MVIExample;
 			productName = OttraiThisaiOttam;
-			productReference = F4B650101FDD336D00EC4972 /* OttraiThisaiOttam.app */;
+			productReference = F4B650101FDD336D00EC4972 /* MVIExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F4B650231FDD336D00EC4972 /* OttraiThisaiOttamTests */ = {
+		F4B650231FDD336D00EC4972 /* MVIExampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F4B6503B1FDD336D00EC4972 /* Build configuration list for PBXNativeTarget "OttraiThisaiOttamTests" */;
+			buildConfigurationList = F4B6503B1FDD336D00EC4972 /* Build configuration list for PBXNativeTarget "MVIExampleTests" */;
 			buildPhases = (
 				68F19223CC898548EE436EC6 /* [CP] Check Pods Manifest.lock */,
 				F4B650201FDD336D00EC4972 /* Sources */,
@@ -309,14 +322,14 @@
 			dependencies = (
 				F4B650261FDD336D00EC4972 /* PBXTargetDependency */,
 			);
-			name = OttraiThisaiOttamTests;
+			name = MVIExampleTests;
 			productName = OttraiThisaiOttamTests;
-			productReference = F4B650241FDD336D00EC4972 /* OttraiThisaiOttamTests.xctest */;
+			productReference = F4B650241FDD336D00EC4972 /* MVIExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F4B6502E1FDD336D00EC4972 /* OttraiThisaiOttamUITests */ = {
+		F4B6502E1FDD336D00EC4972 /* MVIExampleUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F4B6503E1FDD336D00EC4972 /* Build configuration list for PBXNativeTarget "OttraiThisaiOttamUITests" */;
+			buildConfigurationList = F4B6503E1FDD336D00EC4972 /* Build configuration list for PBXNativeTarget "MVIExampleUITests" */;
 			buildPhases = (
 				F4B6502B1FDD336D00EC4972 /* Sources */,
 				F4B6502C1FDD336D00EC4972 /* Frameworks */,
@@ -327,9 +340,9 @@
 			dependencies = (
 				F4B650311FDD336D00EC4972 /* PBXTargetDependency */,
 			);
-			name = OttraiThisaiOttamUITests;
+			name = MVIExampleUITests;
 			productName = OttraiThisaiOttamUITests;
-			productReference = F4B6502F1FDD336D00EC4972 /* OttraiThisaiOttamUITests.xctest */;
+			productReference = F4B6502F1FDD336D00EC4972 /* MVIExampleUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -358,7 +371,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F4B6500B1FDD336D00EC4972 /* Build configuration list for PBXProject "OttraiThisaiOttam" */;
+			buildConfigurationList = F4B6500B1FDD336D00EC4972 /* Build configuration list for PBXProject "MVIExample" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -371,9 +384,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F4B6500F1FDD336D00EC4972 /* OttraiThisaiOttam */,
-				F4B650231FDD336D00EC4972 /* OttraiThisaiOttamTests */,
-				F4B6502E1FDD336D00EC4972 /* OttraiThisaiOttamUITests */,
+				F4B6500F1FDD336D00EC4972 /* MVIExample */,
+				F4B650231FDD336D00EC4972 /* MVIExampleTests */,
+				F4B6502E1FDD336D00EC4972 /* MVIExampleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -413,7 +426,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-OttraiThisaiOttam/Pods-OttraiThisaiOttam-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-MVIExample/Pods-MVIExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
@@ -424,7 +437,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OttraiThisaiOttam/Pods-OttraiThisaiOttam-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVIExample/Pods-MVIExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		58D9C9975780045B62C338B6 /* [CP] Embed Pods Frameworks */ = {
@@ -433,7 +446,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-OttraiThisaiOttamTests/Pods-OttraiThisaiOttamTests-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-MVIExampleTests/Pods-MVIExampleTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Cuckoo/Cuckoo.framework",
 				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
@@ -448,7 +461,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OttraiThisaiOttamTests/Pods-OttraiThisaiOttamTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVIExampleTests/Pods-MVIExampleTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		68F19223CC898548EE436EC6 /* [CP] Check Pods Manifest.lock */ = {
@@ -462,7 +475,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OttraiThisaiOttamTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MVIExampleTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -480,7 +493,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OttraiThisaiOttam-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MVIExample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -499,7 +512,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Define output file. Change \"$PROJECT_DIR/Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"$PROJECT_DIR/OttraiThisaiOttamTests/Mocks/GeneratedMocks.swift\"\necho \"Generated Mocks File = $OUTPUT_FILE\"\n\n# Define input directory. Change \"$PROJECT_DIR\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"$PROJECT_DIR\"\necho \"Mocks Input Directory = $INPUT_DIR\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n${PODS_ROOT}/Cuckoo/run generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"$INPUT_DIR/OttraiThisaiOttamTests/Budapest/SpyableBudapestView.swift\" \\\n\"$INPUT_DIR/OttraiThisaiOttamTests/Counter/SpyableCounterView.swift\"\n# ... and so forth\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.";
+			shellScript = "# Define output file. Change \"$PROJECT_DIR/Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"$PROJECT_DIR/MVIExampleTests/Mocks/GeneratedMocks.swift\"\necho \"Generated Mocks File = $OUTPUT_FILE\"\n\n# Define input directory. Change \"$PROJECT_DIR\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"$PROJECT_DIR\"\necho \"Mocks Input Directory = $INPUT_DIR\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n${PODS_ROOT}/Cuckoo/run generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"$INPUT_DIR/MVIExampleTests/Budapest/SpyableBudapestView.swift\" \\\n\"$INPUT_DIR/MVIExampleTests/Counter/SpyableCounterView.swift\"\n# ... and so forth\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -515,11 +528,11 @@
 				F413CBFB1FDD3AB8002DBC72 /* BudapestState.swift in Sources */,
 				F439D6001FFE31CB000D1160 /* HomeViewController.swift in Sources */,
 				F413CBF71FDD3AB8002DBC72 /* BudapestViewController.swift in Sources */,
+				16082D0D2116D5E700ABD572 /* CounterIntentions.swift in Sources */,
 				F40A33001FE16B6C00D06DBB /* CounterView.swift in Sources */,
 				F4B956721FDEB66B00DA4E6C /* CounterState.swift in Sources */,
 				F4EA8AD31FFB9508003D4AFD /* Strings+Ex.swift in Sources */,
 				F439D5FE1FFE1D3D000D1160 /* CounterViewController.swift in Sources */,
-				F40F046E1FDFDAF100390991 /* CounterIntentions.swift in Sources */,
 				F4B650141FDD336D00EC4972 /* AppDelegate.swift in Sources */,
 				F40A33021FE16BB100D06DBB /* CounterViewRenderer.swift in Sources */,
 				F4B956741FDEB83200DA4E6C /* CounterModel.swift in Sources */,
@@ -530,7 +543,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4B650291FDD336D00EC4972 /* OttraiThisaiOttamTests.swift in Sources */,
 				F454A6B41FDE7E0E0010DD98 /* BudapestViewTests.swift in Sources */,
 				F413CBFE1FDD3B19002DBC72 /* BudapestModelTests.swift in Sources */,
 				F454A6B61FDE7E860010DD98 /* SpyableBudapestView.swift in Sources */,
@@ -555,12 +567,12 @@
 /* Begin PBXTargetDependency section */
 		F4B650261FDD336D00EC4972 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F4B6500F1FDD336D00EC4972 /* OttraiThisaiOttam */;
+			target = F4B6500F1FDD336D00EC4972 /* MVIExample */;
 			targetProxy = F4B650251FDD336D00EC4972 /* PBXContainerItemProxy */;
 		};
 		F4B650311FDD336D00EC4972 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F4B6500F1FDD336D00EC4972 /* OttraiThisaiOttam */;
+			target = F4B6500F1FDD336D00EC4972 /* MVIExample */;
 			targetProxy = F4B650301FDD336D00EC4972 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -698,14 +710,14 @@
 		};
 		F4B650391FDD336D00EC4972 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4CAD6327925FE7DA0EAE4E27 /* Pods-OttraiThisaiOttam.debug.xcconfig */;
+			baseConfigurationReference = F4D1B6F6BF4FE4741556C1D1 /* Pods-MVIExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X24545VLSC;
-				INFOPLIST_FILE = OttraiThisaiOttam/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MVIExample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.rugmangathan.OttraiThisaiOttam;
+				PRODUCT_BUNDLE_IDENTIFIER = co.rugmangathan.MVIExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -714,14 +726,14 @@
 		};
 		F4B6503A1FDD336D00EC4972 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94A983DC604214B43E2F93B1 /* Pods-OttraiThisaiOttam.release.xcconfig */;
+			baseConfigurationReference = AA9EF275A08231343E5C57CC /* Pods-MVIExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X24545VLSC;
-				INFOPLIST_FILE = OttraiThisaiOttam/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MVIExample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.rugmangathan.OttraiThisaiOttam;
+				PRODUCT_BUNDLE_IDENTIFIER = co.rugmangathan.MVIExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -730,37 +742,37 @@
 		};
 		F4B6503C1FDD336D00EC4972 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9966FB95DCCB4CC1FA71A54C /* Pods-OttraiThisaiOttamTests.debug.xcconfig */;
+			baseConfigurationReference = 621389532C9ED1351DBE8B5F /* Pods-MVIExampleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X24545VLSC;
-				INFOPLIST_FILE = OttraiThisaiOttamTests/Info.plist;
+				INFOPLIST_FILE = MVIExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.theinnovationinc..OttraiThisaiOttamTests;
+				PRODUCT_BUNDLE_IDENTIFIER = co.rugmangathan.MVIExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OttraiThisaiOttam.app/OttraiThisaiOttam";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVIExample.app/MVIExample";
 			};
 			name = Debug;
 		};
 		F4B6503D1FDD336D00EC4972 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8F54B9803D3F768B0E66E701 /* Pods-OttraiThisaiOttamTests.release.xcconfig */;
+			baseConfigurationReference = 23909B0DB7B9FF77AEC4F772 /* Pods-MVIExampleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X24545VLSC;
-				INFOPLIST_FILE = OttraiThisaiOttamTests/Info.plist;
+				INFOPLIST_FILE = MVIExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.theinnovationinc..OttraiThisaiOttamTests;
+				PRODUCT_BUNDLE_IDENTIFIER = co.rugmangathan.MVIExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OttraiThisaiOttam.app/OttraiThisaiOttam";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVIExample.app/MVIExample";
 			};
 			name = Release;
 		};
@@ -770,13 +782,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X24545VLSC;
-				INFOPLIST_FILE = OttraiThisaiOttamUITests/Info.plist;
+				INFOPLIST_FILE = MVIExampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.theinnovationinc..OttraiThisaiOttamUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = co.rugmangathan.MVIExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = OttraiThisaiOttam;
+				TEST_TARGET_NAME = MVIExample;
 			};
 			name = Debug;
 		};
@@ -786,20 +799,21 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X24545VLSC;
-				INFOPLIST_FILE = OttraiThisaiOttamUITests/Info.plist;
+				INFOPLIST_FILE = MVIExampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.theinnovationinc..OttraiThisaiOttamUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = co.rugmangathan.MVIExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = OttraiThisaiOttam;
+				TEST_TARGET_NAME = MVIExample;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F4B6500B1FDD336D00EC4972 /* Build configuration list for PBXProject "OttraiThisaiOttam" */ = {
+		F4B6500B1FDD336D00EC4972 /* Build configuration list for PBXProject "MVIExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F4B650361FDD336D00EC4972 /* Debug */,
@@ -808,7 +822,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F4B650381FDD336D00EC4972 /* Build configuration list for PBXNativeTarget "OttraiThisaiOttam" */ = {
+		F4B650381FDD336D00EC4972 /* Build configuration list for PBXNativeTarget "MVIExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F4B650391FDD336D00EC4972 /* Debug */,
@@ -817,7 +831,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F4B6503B1FDD336D00EC4972 /* Build configuration list for PBXNativeTarget "OttraiThisaiOttamTests" */ = {
+		F4B6503B1FDD336D00EC4972 /* Build configuration list for PBXNativeTarget "MVIExampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F4B6503C1FDD336D00EC4972 /* Debug */,
@@ -826,7 +840,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F4B6503E1FDD336D00EC4972 /* Build configuration list for PBXNativeTarget "OttraiThisaiOttamUITests" */ = {
+		F4B6503E1FDD336D00EC4972 /* Build configuration list for PBXNativeTarget "MVIExampleUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F4B6503F1FDD336D00EC4972 /* Debug */,

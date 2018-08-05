@@ -1,10 +1,11 @@
 platform :ios, '9.0'
 use_frameworks!
 
-target 'OttraiThisaiOttam' do
+target 'MVIExample' do
   pod 'RxSwift', '= 4.2.0'
   pod 'RxCocoa', '= 4.2.0'
-  target 'OttraiThisaiOttamTests' do
+
+  target 'MVIExampleTests' do
     pod 'RxBlocking', '= 4.2.0'
     pod 'RxTest',     '= 4.2.0'
     pod 'Cuckoo',     '= 0.11.3'

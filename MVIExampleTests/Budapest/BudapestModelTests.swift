@@ -12,7 +12,7 @@ import RxSwift
 import RxBlocking
 import RxCocoa
 
-@testable import OttraiThisaiOttam
+@testable import MVIExample
 
 class BudapestModelTests: XCTestCase {
   var disposable: Disposable!

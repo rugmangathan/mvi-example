@@ -7,7 +7,7 @@
 //
 
 import Foundation
-@testable import OttraiThisaiOttam
+@testable import MVIExample
 
 class SpyableBudapestView: BudapestView {
   func greetStranger() {}

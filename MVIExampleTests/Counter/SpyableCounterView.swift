@@ -7,7 +7,7 @@
 //
 
 import Foundation
-@testable import OttraiThisaiOttam
+@testable import MVIExample
 
 class SpyableCounterView: CounterView {
   func showCounterValues(_ count: Int64, _ clicks: Int64) {}

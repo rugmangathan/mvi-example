@@ -8,13 +8,12 @@
 
 import XCTest
 import Cuckoo
-@testable import OttraiThisaiOttam
+@testable import MVIExample
 
 class CounterViewTests: XCTestCase {
   func testRenderCounterState() {
     // Setup
-    let spyView = MockSpyableCounterView()
-      .withEnabledSuperclassSpy()
+    let spyView = MockSpyableCounterView().withEnabledSuperclassSpy()
     let renderer = CounterViewRenderer(spyView)
     let count: Int64 = 1, clicks: Int64 = 1
 

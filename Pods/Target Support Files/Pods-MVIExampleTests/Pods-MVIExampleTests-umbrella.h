@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_OttraiThisaiOttamTestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_OttraiThisaiOttamTestsVersionString[];
+FOUNDATION_EXPORT double Pods_MVIExampleTestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_MVIExampleTestsVersionString[];
 

@@ -12,7 +12,7 @@ import RxSwift
 import RxCocoa
 import Cuckoo
 
-@testable import OttraiThisaiOttam
+@testable import MVIExample
 let disposeBag = DisposeBag()
 
 class CounterModelTests: XCTestCase {
