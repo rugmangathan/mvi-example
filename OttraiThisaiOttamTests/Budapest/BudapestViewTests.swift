@@ -15,8 +15,7 @@ class BudapestViewTests: XCTestCase {
   var renderer: BudapestViewRenderer!
 
   override func setUp() {
-    view = MockSpyableBudapestView()
-      .spy(on: SpyableBudapestView())
+    view = MockSpyableBudapestView().withEnabledSuperclassSpy()
     renderer = BudapestViewRenderer(view)
   }
 

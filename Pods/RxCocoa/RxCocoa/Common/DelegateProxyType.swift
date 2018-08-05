@@ -11,9 +11,7 @@
     import func Foundation.objc_getAssociatedObject
     import func Foundation.objc_setAssociatedObject
 
-    #if !RX_NO_MODULE
-        import RxSwift
-    #endif
+    import RxSwift
 
 /**
 `DelegateProxyType` protocol enables using both normal delegates and Rx observable sequences with
@@ -296,6 +294,27 @@ extension DelegateProxyType where ParentObject: HasDataSource, Self.Delegate == 
     }
 }
 
+/// Describes an object that has a prefetch data source.
+@available(iOS 10.0, tvOS 10.0, *)
+public protocol HasPrefetchDataSource: AnyObject {
+    /// Prefetch data source type
+    associatedtype PrefetchDataSource
+
+    /// Prefetch data source
+    var prefetchDataSource: PrefetchDataSource? { get set }
+}
+
+@available(iOS 10.0, tvOS 10.0, *)
+extension DelegateProxyType where ParentObject: HasPrefetchDataSource, Self.Delegate == ParentObject.PrefetchDataSource {
+    public static func currentDelegate(for object: ParentObject) -> Delegate? {
+        return object.prefetchDataSource
+    }
+
+    public static func setCurrentDelegate(_ delegate: Delegate?, to object: ParentObject) {
+        object.prefetchDataSource = delegate
+    }
+}
+
     #if os(iOS) || os(tvOS)
         import UIKit
 
@@ -388,7 +407,6 @@ extension DelegateProxyType where ParentObject: HasDataSource, Self.Delegate == 
         fileprivate func extend<DelegateProxy: DelegateProxyType, ParentObject>(make: @escaping (ParentObject) -> DelegateProxy) {
                 MainScheduler.ensureExecutingOnScheduler()
                 precondition(_identifier == DelegateProxy.identifier, "Delegate proxy has inconsistent identifier")
-                precondition((DelegateProxy.self as? DelegateProxy.Delegate) != nil, "DelegateProxy subclass should be as a Delegate")
                 guard _factories[ObjectIdentifier(ParentObject.self)] == nil else {
                     rxFatalError("The factory of \(ParentObject.self) is duplicated. DelegateProxy is not allowed of duplicated base object type.")
                 }

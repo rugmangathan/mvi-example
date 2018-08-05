@@ -1,7 +1,7 @@
 # Cuckoo
 ## Mock your Swift objects!
 
-[![CI Status](http://img.shields.io/travis/SwiftKit/Cuckoo.svg?style=flat)](https://travis-ci.org/SwiftKit/Cuckoo)
+[![CI Status](http://img.shields.io/travis/Brightify/Cuckoo.svg?style=flat)](https://travis-ci.org/Brightify/Cuckoo)
 [![Version](https://img.shields.io/cocoapods/v/Cuckoo.svg?style=flat)](http://cocoapods.org/pods/Cuckoo)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/Cuckoo.svg?style=flat)](http://cocoapods.org/pods/Cuckoo)
@@ -54,7 +54,7 @@ We plan to add a **watchOS 2+** support soon.
 
 ## Cuckoo
 
-### Installation
+### 1. Installation
 
 #### CocoaPods
 Cuckoo runtime is available through [CocoaPods](http://cocoapods.org). To install
@@ -67,21 +67,21 @@ pod "Cuckoo"
 And add the following `Run script` build phase to your test target's `Build Phases`:
 
 ```Bash
-# Define output file. Change "$PROJECT_DIR/Tests" to your test's root source folder, if it's not the default name.
-OUTPUT_FILE="$PROJECT_DIR/Tests/GeneratedMocks.swift"
+# Define output file. Change "$PROJECT_DIR/${PROJECT_NAME}Tests" to your test's root source folder, if it's not the default name.
+OUTPUT_FILE="$PROJECT_DIR/${PROJECT_NAME}Tests/GeneratedMocks.swift"
 echo "Generated Mocks File = $OUTPUT_FILE"
 
-# Define input directory. Change "$PROJECT_DIR" to your project's root source folder, if it's not the default name.
-INPUT_DIR="$PROJECT_DIR"
+# Define input directory. Change "${PROJECT_DIR}/${PROJECT_NAME}" to your project's root source folder, if it's not the default name.
+INPUT_DIR="${PROJECT_DIR}/${PROJECT_NAME}"
 echo "Mocks Input Directory = $INPUT_DIR"
 
 # Generate mock files, include as many input files as you'd like to create mocks for.
-${PODS_ROOT}/Cuckoo/run generate --testable "$PROJECT_NAME" \
+"${PODS_ROOT}/Cuckoo/run" generate --testable "$PROJECT_NAME" \
 --output "${OUTPUT_FILE}" \
 "$INPUT_DIR/FileName1.swift" \
 "$INPUT_DIR/FileName2.swift" \
 "$INPUT_DIR/FileName3.swift"
-# ... and so forth
+# ... and so forth, the last line should never end with a backslash
 
 # After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.
 ```
@@ -99,27 +99,36 @@ github "SwiftKit/Cuckoo"
 
 Then use the `Run script` from above and replace
 ```Bash
-${PODS_ROOT}/Cuckoo/run
+"${PODS_ROOT}/Cuckoo/run"
 ```
 with
 ```Bash
-Carthage/Checkouts/Cuckoo/run
+"Carthage/Checkouts/Cuckoo/run"
 ```
 
 Also don't forget to add the Framework into your project.
 
-### Usage
+### 2. Usage
 
 Usage of Cuckoo is similar to [Mockito](http://mockito.org/) and [Hamcrest](http://hamcrest.org/). But there are some differences and limitations caused by generating the mocks and Swift language itself. List of all supported features can be found below. You can find complete example in [tests](Tests).
 
 #### Mock initialization
 
-Mocks can be created with the same constructors as the mocked type. If you want to spy on object you can call `spy(on: Type)` method. Name of mock class always corresponds to name of the mocked class/protocol with `Mock` prefix. For example mock of protocol `Greeter` has a name `MockGreeter`.  
+Mocks can be created with the same constructors as the mocked type. Name of mock class always corresponds to name of the mocked class/protocol with `Mock` prefix. For example mock of protocol `Greeter` has a name `MockGreeter`.
 
 ```Swift
 let mock = MockGreeter()
-let spy = MockGreeter().spy(on: aRealInstanceOfGreeter)
 ```
+
+#### Spy
+
+Spies are a special case of Mocks where each call is forwarded to the victim by default. From Cuckoo version `0.11.0` we changed the way spies work. When you need a spy, give Cuckoo a class to mock instead of a protocol. You'll then be able to call `enableSuperclassSpy()` (or `withEnabledSuperclassSpy()`) on a mock instance and it will behave like a spy for the parent class.
+
+```Swift
+let spy = MockGreeter().withEnabledSuperclassSpy()
+```
+
+NOTE: The behavior was changed due to a limitation of Swift. Since we can't create a real proxy for the spy, calls inside the spy were not catched by the Mock and it was confusing. If you rely on the old behavior (i.e. you use spies with final classes), let us know on Slack or in the issues.
 
 #### Stubbing
 
@@ -235,10 +244,13 @@ argumentCaptor.allValues // Returns [10, 20, 30]
 
 As you can see, method `capture()` is used to create matcher for the call and then you can get the arguments via properties `value` and `allValues`. `value` returns last captured argument or nil if none. `allValues` returns array with all captured values.
 
-#### Parameter matchers
+### 3. Matchers
 
-As parameters of methods in stubbing and verification you can use objects which conform to `Matchable` protocol.
+Cuckoo make use of *matchers* to connect your mocks to your code under test.
 
+#### A) Automatic matchers for known types
+
+You can mock any object that conforms to the `Matchable` protocol.
 These basic values are extended to conform to `Matchable`:
 
 * `Bool`
@@ -257,9 +269,32 @@ These basic values are extended to conform to `Matchable`:
 * `UInt32`
 * `UInt64`
 
-Note: Optional types (for example `Int?`) cannot be used directly. You need to wrap them with `equal(to)` function.
+Note: Optional types (for example `Int?`) cannot be used directly. You need to wrap them with `equal(to)` function (see bellow).
 
-`ParameterMatcher` also conform to `Matchable`. You can create your own `ParameterMatcher` instances or if you want to directly use your custom types there is the `Matchable` protocol. Standard instances of `ParameterMatcher` can be obtain via these functions:
+#### B) Custom matchers
+
+If Cuckoo doesn't know to type you are trying to compare, you have to write your own method `equal(to:)` using a `ParameterMatcher`. Add this method to your test file:
+
+```swift
+func equal(to value: YourCustomType) -> ParameterMatcher<YourCustomType> {
+    return ParameterMatcher { tested in
+        // Implementation of your equality test.
+        // ie: (try? tested.method()) == (try? value.method())
+    }
+}
+```
+
+⚠️ If you try to match an object with an unknown or non-`Matchable` type, it could lead to:
+
+```
+Command failed due to signal: Segmentation fault: 11
+```
+
+For details and implementation example (with Alamofire), see [this issue](https://github.com/Brightify/Cuckoo/issues/124).
+
+#### Parameter matchers
+
+`ParameterMatcher` also conforms to `Matchable`. You can create your own `ParameterMatcher` instances or if you want to directly use your custom types there is the `Matchable` protocol. Standard instances of `ParameterMatcher` can be obtained via these functions:
 
 ```Swift
 /// Returns an equality matcher.
@@ -425,11 +460,20 @@ Display general or command-specific help.
 
 After the `help` you can write name of another command for displaying a command-specific help.
 
-## Authors
+## Contribute
 
-* Tadeas Kriz, [tadeas@brightify.org](mailto:tadeas@brightify.org)
-* Filip Dolník, [filip@brightify.org](mailto:filip@brightify.org)
-* Adriaan (Arjan) Duijzer [arjan@nxtstep.nl](mailto:arjan@nxtstep.nl)
+Cuckoo is open for everyone and we'd like you to help us make the best Swift mocking library. For Cuckoo development, follow these steps:
+1. Make sure you have Xcode 9.1 installed
+2. Clone the **Cuckoo** repository
+3. In Terminal, run: `make dev` from inside the **Cuckoo** directory.
+4. Open `Cuckoo.xcodeproj` and peek around
+
+The project is made of two parts - runtime and code generator. When you open the `Cuckoo.xcodeproj` in Xcode, you'll see these directories:
+    * `Source` - runtime sources
+    * `Tests` - tests for the runtime part
+    * `CuckoGenerator.xcodeproj` - project generated by `swift package generate-xcodeproj` for the Generator sources
+
+Thank you for your help!
 
 ## Inspiration
 

@@ -1,8 +1,0 @@
-version: "Apple Swift version 4.0.3 (swiftlang-900.0.74.1 clang-900.0.39.2)"
-options: "0f3ee7e2efa3b135b397bee02c55a2fd"
-build_time: [1512898915, 55272000]
-inputs:
-  "/Users/RMK_IINC/Documents/Projects/Demo/OttraiThisaiOttam/Pods/Cuckoo/Generator/Source/cuckoo_generator/CuckooGeneratorError.swift": [1512898118, 0]
-  "/Users/RMK_IINC/Documents/Projects/Demo/OttraiThisaiOttam/Pods/Cuckoo/Generator/Source/cuckoo_generator/GenerateMocksCommand.swift": [1512898118, 0]
-  "/Users/RMK_IINC/Documents/Projects/Demo/OttraiThisaiOttam/Pods/Cuckoo/Generator/Source/cuckoo_generator/VersionCommand.swift": [1512898118, 0]
-  "/Users/RMK_IINC/Documents/Projects/Demo/OttraiThisaiOttam/Pods/Cuckoo/Generator/Source/cuckoo_generator/main.swift": [1512898118, 0]

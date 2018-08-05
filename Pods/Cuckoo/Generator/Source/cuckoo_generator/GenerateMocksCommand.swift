@@ -23,9 +23,9 @@ public struct GenerateMocksCommand: CommandProtocol {
     public let function = "Generates mock files"
     
     public func run(_ options: Options) -> Result<Void, CuckooGeneratorError> {
-        let inputPathValues = Array(Set(options.files.map { Path($0).standardRawValue }))
-        let inputFiles = inputPathValues.map { File(path: $0) }
-        let tokens = inputFiles.flatMap { $0 }.map { Tokenizer(sourceFile: $0).tokenize() }
+        let inputPathValues = Array(Set(options.files.map { Path($0).standardRawValue })).sorted()
+        let inputFiles = inputPathValues.map { File(path: $0) }.flatMap { $0 }
+        let tokens = inputFiles.map { Tokenizer(sourceFile: $0).tokenize() }
         let tokensWithInheritance = options.noInheritance ? tokens : mergeInheritance(tokens)
         let tokensWithoutClasses = options.noClassMocking ? removeClasses(tokensWithInheritance) : tokensWithInheritance
         // filter excluded classes/protocols
@@ -33,7 +33,7 @@ public struct GenerateMocksCommand: CommandProtocol {
 
         let headers = parsedFiles.map { options.noHeader ? "" : FileHeaderHandler.getHeader(of: $0, includeTimestamp: !options.noTimestamp) }
         let imports = parsedFiles.map { FileHeaderHandler.getImports(of: $0, testableFrameworks: options.testableFrameworks) }
-        let mocks = parsedFiles.map { Generator(file: $0).generate() }
+        let mocks = parsedFiles.map { try! Generator(file: $0).generate() }
         
         let mergedFiles = zip(zip(headers, imports), mocks).map { $0.0 + $0.1 + $1 }
         let outputPath = Path(options.output)
@@ -56,8 +56,7 @@ public struct GenerateMocksCommand: CommandProtocol {
             return .failure(.unknownError(error))
         }
         
-        let couldNotOpenFile = inputFiles.contains { $0 == nil }
-        return stderrUsed || couldNotOpenFile ? .failure(.stderrUsed) : .success(())
+        return stderrUsed ? .failure(.stderrUsed) : .success(())
     }
 
     private func mergeInheritance(_ filesRepresentation: [FileRepresentation]) -> [FileRepresentation] {

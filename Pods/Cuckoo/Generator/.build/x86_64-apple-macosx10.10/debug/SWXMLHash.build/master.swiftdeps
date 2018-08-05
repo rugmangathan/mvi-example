@@ -1,6 +1,0 @@
-version: "Apple Swift version 4.0.3 (swiftlang-900.0.74.1 clang-900.0.39.2)"
-options: "716db8d0911f1b04fe3f0a41517052d3"
-build_time: [1512898897, 94296000]
-inputs:
-  "/Users/RMK_IINC/Documents/Projects/Demo/OttraiThisaiOttam/Pods/Cuckoo/Generator/.build/checkouts/SWXMLHash.git-5776748636326364470/Source/SWXMLHash+TypeConversion.swift": [1512898894, 0]
-  "/Users/RMK_IINC/Documents/Projects/Demo/OttraiThisaiOttam/Pods/Cuckoo/Generator/.build/checkouts/SWXMLHash.git-5776748636326364470/Source/SWXMLHash.swift": [1512898894, 0]

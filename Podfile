@@ -2,13 +2,12 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'OttraiThisaiOttam' do
-  pod 'RxSwift', '= 4.0.0'
-  pod 'RxCocoa', :git => 'https://github.com/ReactiveX/RxSwift.git', :commit => 'a1e6be8'
-
+  pod 'RxSwift', '= 4.2.0'
+  pod 'RxCocoa', '= 4.2.0'
   target 'OttraiThisaiOttamTests' do
-    pod 'RxBlocking', '= 4.0.0'
-    pod 'RxTest',     '= 4.0.0'
-    pod 'Cuckoo',     '= 0.10.1'
+    pod 'RxBlocking', '= 4.2.0'
+    pod 'RxTest',     '= 4.2.0'
+    pod 'Cuckoo',     '= 0.11.3'
     inherit! :search_paths
   end
 end

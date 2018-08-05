@@ -1,6 +1,0 @@
-version: "Apple Swift version 4.0.3 (swiftlang-900.0.74.1 clang-900.0.39.2)"
-options: "3926181dbc0377a1262aed1fa95d7671"
-build_time: [1512898897, 94652000]
-inputs:
-  "/Users/RMK_IINC/Documents/Projects/Demo/OttraiThisaiOttam/Pods/Cuckoo/Generator/.build/checkouts/Result.git-8684547452332391156/Result/Result.swift": [1512898893, 0]
-  "/Users/RMK_IINC/Documents/Projects/Demo/OttraiThisaiOttam/Pods/Cuckoo/Generator/.build/checkouts/Result.git-8684547452332391156/Result/ResultProtocol.swift": [1512898893, 0]

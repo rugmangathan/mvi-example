@@ -2,20 +2,23 @@
 
 SCRIPT_PATH="$(dirname "$0")"
 FILE_NAME="cuckoo_generator"
-FILE_PATH="$SCRIPT_PATH/Generator/.build/debug/$FILE_NAME"
-if [[ "$1" = "--clean" || ! -e "$FILE_PATH" ]]; then
-    pushd "$SCRIPT_PATH"
-	./build_generator
-	popd
-fi
-
-if [[ "$1" = "--clean" ]]; then
-	shift
+FILE_PATH="$SCRIPT_PATH/$FILE_NAME"
+GREP_OPTIONS=""
+if [[ ! -e "$FILE_PATH" ]]; then
+  echo "No Cuckoo Generator found, downloading latest version..."
+  pushd "$SCRIPT_PATH"
+  curl -Lo ${FILE_NAME} `curl "https://api.github.com/repos/Brightify/Cuckoo/releases/latest" | grep -oe '"browser_download_url":\s*"[^" ]*"' | grep -oe 'http[^" ]*' | grep ${FILE_NAME} | head -1`
+  chmod +x ${FILE_NAME}
+  popd
 fi
 
 INPUT_FILES=""
 if [[ "$#" > 0 ]]; then
 	INPUT_FILES=$(printf '%q ' "$@")
+fi
+
+if [[ -z $SCRIPT_INPUT_FILE_COUNT ]]; then
+  SCRIPT_INPUT_FILE_COUNT=0
 fi
 
 for (( i=0; i<$SCRIPT_INPUT_FILE_COUNT; i++ ))

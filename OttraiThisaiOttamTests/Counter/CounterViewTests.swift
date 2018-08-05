@@ -14,7 +14,7 @@ class CounterViewTests: XCTestCase {
   func testRenderCounterState() {
     // Setup
     let spyView = MockSpyableCounterView()
-      .spy(on: SpyableCounterView())
+      .withEnabledSuperclassSpy()
     let renderer = CounterViewRenderer(spyView)
     let count: Int64 = 1, clicks: Int64 = 1
 
