@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 
-class CounterViewController: UIViewController {
+class CounterViewController: MviController<CounterState> {
   @IBOutlet weak var clicksLabel: UILabel!
   @IBOutlet weak var countLabel: UILabel!
   @IBOutlet weak var incrementButtton: UIButton!
@@ -24,17 +24,13 @@ class CounterViewController: UIViewController {
     return CounterViewRenderer(self)
   }()
 
-  private let disposeBag = DisposeBag()
+  override func bind(states: Observable<CounterState>) -> Observable<CounterState> {
+    return CounterModel
+      .bind(intentions, lifecycle.asObservable(), states)
+  }
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-
-    CounterModel
-      .bind(intentions)
-      .subscribe(onNext: { state in
-        self.renderer.render(state)
-      })
-      .disposed(by: disposeBag)
+  override func effects(state: CounterState) {
+    renderer.render(state)
   }
 }
 

@@ -18,7 +18,9 @@ let disposeBag = DisposeBag()
 class CounterModelTests: XCTestCase {
   var incrementEvents: PublishRelay<Void>!
   var decrementClicks: PublishRelay<Void>!
+  var lifecycle: PublishRelay<MviLifecycle>!
   var observer: TestableObserver<CounterState>!
+  var states: PublishRelay<CounterState>!
 
   override func setUp() {
     super.setUp()
@@ -30,9 +32,20 @@ class CounterModelTests: XCTestCase {
       .createObserver(CounterState.self)
 
     CounterModel
-      .bind(intentions)
+      .bind(intentions, lifecycle.asObservable(), states.asObservable())
       .subscribe(observer)
       .disposed(by: disposeBag)
+  }
+
+  func testShouldReturnInitialState_whenViewLoads() {
+    // Act
+    lifecycle.accept(.created)
+
+    // Assert
+    let expectedEvents = [
+      next(0, CounterState(count: 0, clicks: 0))
+    ]
+    XCTAssertEqual(observer.events, expectedEvents)
   }
 
   func testShouldIncreaseCountAndClicks_whenUserTapsPlusButton() {

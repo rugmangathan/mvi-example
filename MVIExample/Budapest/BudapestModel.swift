@@ -1,8 +1,9 @@
 //
-// Copyright © 2017 Rugmangathan. All rights reserved.
+//  Strings+Ex.swift
+//  MVIExample
 //
-// Unauthorized copying of this file, via any medium is strictly prohibited.
-// Proprietary and confidential.
+//  Created by Rugmangathan on 02/01/18.
+//  Copyright © 2018 Rugmangathan. All rights reserved.
 //
 
 import RxSwift

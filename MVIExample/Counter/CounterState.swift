@@ -8,13 +8,18 @@
 
 import UIKit
 
-class CounterState: Equatable {
-  let count: Int64
-  let clicks: Int64
+class CounterState: MviState {
+  var count: Int64
+  var clicks: Int64
 
   init(count: Int64 = 0, clicks: Int64 = 0) {
     self.count = count
     self.clicks = clicks
+  }
+
+  required init(_ state: CounterState) {
+    self.count = state.count
+    self.clicks = state.clicks
   }
 
   static func ==(lhs: CounterState, rhs: CounterState) -> Bool {

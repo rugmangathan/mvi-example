@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0D724565DFC15C6BB9657DF2 /* Pods_MVIExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0940EE3971DBF251F8E53CF /* Pods_MVIExampleTests.framework */; };
 		16082D0D2116D5E700ABD572 /* CounterIntentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16082D0C2116D5E700ABD572 /* CounterIntentions.swift */; };
+		16082D10211719A500ABD572 /* MviController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16082D0F211719A500ABD572 /* MviController.swift */; };
+		16082D1221171A4300ABD572 /* MviLifecycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16082D1121171A4300ABD572 /* MviLifecycle.swift */; };
 		77F59224C72821863A9C4848 /* Pods_MVIExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EDD55AF90918E4706496E1 /* Pods_MVIExample.framework */; };
 		F40A33001FE16B6C00D06DBB /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40A32FF1FE16B6C00D06DBB /* CounterView.swift */; };
 		F40A33021FE16BB100D06DBB /* CounterViewRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40A33011FE16BB100D06DBB /* CounterViewRenderer.swift */; };
@@ -59,6 +61,8 @@
 /* Begin PBXFileReference section */
 		131D9DD6D8E12AE07203B402 /* Pods_OttraiThisaiOttam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OttraiThisaiOttam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		16082D0C2116D5E700ABD572 /* CounterIntentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterIntentions.swift; sourceTree = "<group>"; };
+		16082D0F211719A500ABD572 /* MviController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MviController.swift; sourceTree = "<group>"; };
+		16082D1121171A4300ABD572 /* MviLifecycle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MviLifecycle.swift; sourceTree = "<group>"; };
 		23909B0DB7B9FF77AEC4F772 /* Pods-MVIExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVIExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVIExampleTests/Pods-MVIExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		3C8417414527CB1684338395 /* Pods_OttraiThisaiOttamTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OttraiThisaiOttamTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CAD6327925FE7DA0EAE4E27 /* Pods-OttraiThisaiOttam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OttraiThisaiOttam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OttraiThisaiOttam/Pods-OttraiThisaiOttam.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +136,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16082D0E211714C700ABD572 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				16082D0F211719A500ABD572 /* MviController.swift */,
+				16082D1121171A4300ABD572 /* MviLifecycle.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		464D77DC41DFE8837B3867BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +206,7 @@
 		F4B650071FDD336D00EC4972 = {
 			isa = PBXGroup;
 			children = (
+				16082D0E211714C700ABD572 /* Common */,
 				F4B650121FDD336D00EC4972 /* MVIExample */,
 				F4B650271FDD336D00EC4972 /* MVIExampleTests */,
 				F4B650321FDD336D00EC4972 /* MVIExampleUITests */,
@@ -517,6 +531,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16082D1221171A4300ABD572 /* MviLifecycle.swift in Sources */,
 				F413CBF91FDD3AB8002DBC72 /* BudapestView.swift in Sources */,
 				F413CBF81FDD3AB8002DBC72 /* BudapestIntentions.swift in Sources */,
 				F454A6BD1FDE81370010DD98 /* BudapestViewRenderer.swift in Sources */,
@@ -531,6 +546,7 @@
 				F439D5FE1FFE1D3D000D1160 /* CounterViewController.swift in Sources */,
 				F4B650141FDD336D00EC4972 /* AppDelegate.swift in Sources */,
 				F40A33021FE16BB100D06DBB /* CounterViewRenderer.swift in Sources */,
+				16082D10211719A500ABD572 /* MviController.swift in Sources */,
 				F4B956741FDEB83200DA4E6C /* CounterModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
