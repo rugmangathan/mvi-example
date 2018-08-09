@@ -13,9 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+    setupNavigationAppearance()
+
     return true
   }
 
@@ -41,6 +41,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   }
 
-
+  private func setupNavigationAppearance() {
+    let barTintColor = UIColor(red: 0.84, green: 0.47, blue: 0.26, alpha: 1.0)
+    UINavigationBar.appearance().backgroundColor = UIColor(red: 0.31, green: 0.31, blue: 0.31, alpha: 1.0)
+    UIBarButtonItem.appearance().tintColor = barTintColor
+    UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: barTintColor]
+  }
 }
-

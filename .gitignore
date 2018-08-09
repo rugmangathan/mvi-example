@@ -1,3 +1,4 @@
 
 *.xcbkptlist
 .DS_Store
+.idea/

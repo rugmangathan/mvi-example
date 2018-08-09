@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: MVIExampleTests/Budapest/SpyableBudapestView.swift at 2018-08-07 16:52:40 +0000
+// MARK: - Mocks generated from file: MVIExampleTests/Budapest/SpyableBudapestView.swift at 2018-08-09 16:26:59 +0000
 
 //
 //  SpyableBudapestView.swift
@@ -117,7 +117,7 @@ class MockSpyableBudapestView: SpyableBudapestView, Cuckoo.ClassMock {
 }
 
 
-// MARK: - Mocks generated from file: MVIExampleTests/Counter/SpyableCounterView.swift at 2018-08-07 16:52:40 +0000
+// MARK: - Mocks generated from file: MVIExampleTests/Counter/SpyableCounterView.swift at 2018-08-09 16:26:59 +0000
 
 //
 //  SpyableCounterView.swift

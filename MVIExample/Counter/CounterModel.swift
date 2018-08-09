@@ -26,14 +26,15 @@ class CounterModel {
         return state
     }
 
-    let incrementedState = states.flatMapLatest { state in
-      intentions.increment()
-        .flatMapLatest { value -> Observable<CounterState> in
-        let copiedState = CounterState(state)
-        copiedState.clicks += 1
-        copiedState.count += value
-        return Observable.just(copiedState)
-      }
+    let incrementedState = states
+      .flatMapLatest { state in
+        intentions.increment()
+          .flatMapLatest { value -> Observable<CounterState> in
+            let copiedState = CounterState(state)
+            copiedState.clicks += 1
+            copiedState.count += value
+            return Observable.just(copiedState)
+        }
     }
 
     let decrementedState = states.flatMapLatest { state in

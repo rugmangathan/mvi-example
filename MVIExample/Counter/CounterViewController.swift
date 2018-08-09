@@ -12,12 +12,14 @@ import RxSwift
 class CounterViewController: MviController<CounterState> {
   @IBOutlet weak var clicksLabel: UILabel!
   @IBOutlet weak var countLabel: UILabel!
-  @IBOutlet weak var incrementButtton: UIButton!
+  @IBOutlet weak var incrementButton: UIButton!
   @IBOutlet weak var decrementButton: UIButton!
   
   private lazy var intentions: CounterIntentions = {
-    return CounterIntentions(incrementButtton.rx.tap.asObservable(),
-                             decrementButton.rx.tap.asObservable())
+    return CounterIntentions(
+            incrementButton.rx.tap.asObservable(),
+            decrementButton.rx.tap.asObservable()
+    )
   }()
 
   private lazy var renderer = {
@@ -27,6 +29,11 @@ class CounterViewController: MviController<CounterState> {
   override func bind(states: Observable<CounterState>) -> Observable<CounterState> {
     return CounterModel
       .bind(intentions, lifecycle.asObservable(), states)
+  }
+
+  override func setup() {
+    super.setup()
+    title = "Counter"
   }
 
   override func effects(state: CounterState) {
