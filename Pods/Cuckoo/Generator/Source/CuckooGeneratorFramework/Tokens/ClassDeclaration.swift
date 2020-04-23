@@ -6,31 +6,34 @@
 //  Copyright © 2016 Brightify. All rights reserved.
 //
 
-public struct ClassDeclaration: ContainerToken {
-    public let name: String
-    public let accessibility: Accessibility
-    public let range: CountableRange<Int>
-    public let nameRange: CountableRange<Int>
-    public let bodyRange: CountableRange<Int>
-    public let initializers: [Initializer]
-    public let children: [Token]
+public struct ClassDeclaration: ContainerToken, HasAccessibility {
     public let implementation: Bool = true
-    public let inheritedTypes: [InheritanceDeclaration]
-    public let attributes: [Attribute] = []
-    
+    public var name: String
+    public var accessibility: Accessibility
+    public var range: CountableRange<Int>
+    public var nameRange: CountableRange<Int>
+    public var bodyRange: CountableRange<Int>
+    public var initializers: [Initializer]
+    public var children: [Token]
+    public var inheritedTypes: [InheritanceDeclaration]
+    public var attributes: [Attribute]
+    public var genericParameters: [GenericParameter]
     public var hasNoArgInit: Bool {
         return initializers.filter { $0.parameters.isEmpty }.isEmpty
     }
 
     public func replace(children tokens: [Token]) -> ClassDeclaration {
-        return ClassDeclaration(name: self.name,
-                accessibility: self.accessibility,
-                range: self.range,
-                nameRange: self.nameRange,
-                bodyRange: self.bodyRange,
-                initializers: self.initializers,
-                children: tokens,
-                inheritedTypes: self.inheritedTypes)
+        return ClassDeclaration(
+            name: self.name,
+            accessibility: self.accessibility,
+            range: self.range,
+            nameRange: self.nameRange,
+            bodyRange: self.bodyRange,
+            initializers: self.initializers,
+            children: tokens,
+            inheritedTypes: self.inheritedTypes,
+            attributes: self.attributes,
+            genericParameters: self.genericParameters)
     }
 
     public func isEqual(to other: Token) -> Bool {

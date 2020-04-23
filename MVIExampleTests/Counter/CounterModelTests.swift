@@ -48,7 +48,7 @@ class CounterModelTests: XCTestCase {
 
     // Assert
     let expectedEvents = [
-      next(0, initialState)
+      Recorded.next(0, initialState)
     ]
     XCTAssertEqual(observer.events, expectedEvents)
   }
@@ -62,8 +62,8 @@ class CounterModelTests: XCTestCase {
     // Assert
     let incrementedState = CounterState(count: 1, clicks: 1)
     let expectedEvents = [
-      next(0, initialState),
-      next(0, incrementedState)
+      Recorded.next(0, initialState),
+      Recorded.next(0, incrementedState)
     ]
     XCTAssertEqual(observer.events, expectedEvents)
   }
@@ -76,8 +76,8 @@ class CounterModelTests: XCTestCase {
 
     // Assert
     let expectedEvents = [
-      next(0, initialState),
-      next(0, CounterState(count: -1, clicks: 1))
+      Recorded.next(0, initialState),
+      Recorded.next(0, CounterState(count: -1, clicks: 1))
     ]
     XCTAssertEqual(observer.events, expectedEvents)
   }
@@ -95,9 +95,9 @@ class CounterModelTests: XCTestCase {
 
     // Assert
     let expectedEvents = [
-      next(0, initialState),
-      next(0, incrementedState),
-      next(0, CounterState(count: 0, clicks: 2))
+      Recorded.next(0, initialState),
+      Recorded.next(0, incrementedState),
+      Recorded.next(0, CounterState(count: 0, clicks: 2))
     ]
     XCTAssertEqual(observer.events, expectedEvents)
   }
@@ -118,10 +118,10 @@ class CounterModelTests: XCTestCase {
 
     // Assert
     let expectedEvents = [
-      next(0, initialState),
-      next(0, incrementedState),
-      next(0, decrementedState),
-      next(0, decrementedState)
+      Recorded.next(0, initialState),
+      Recorded.next(0, incrementedState),
+      Recorded.next(0, decrementedState),
+      Recorded.next(0, decrementedState)
     ]
     XCTAssertEqual(observer.events, expectedEvents)
   }

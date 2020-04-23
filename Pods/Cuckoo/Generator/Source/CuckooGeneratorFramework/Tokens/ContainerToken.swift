@@ -6,9 +6,8 @@
 //  Copyright © 2016 Brightify. All rights reserved.
 //
 
-public protocol ContainerToken: Token {
+public protocol ContainerToken: Token, HasAccessibility {
     var name: String { get }
-    var accessibility: Accessibility { get }
     var range: CountableRange<Int> { get }
     var nameRange: CountableRange<Int> { get }
     var bodyRange: CountableRange<Int> { get }
@@ -17,32 +16,57 @@ public protocol ContainerToken: Token {
     var implementation: Bool { get }
     var inheritedTypes: [InheritanceDeclaration] { get }
     var attributes: [Attribute] { get }
+    var genericParameters: [GenericParameter] { get }
 }
 
 extension ContainerToken {
     public func serialize() -> [String : Any] {
-        let properties = children.flatMap { $0 as? InstanceVariable }
+        func withAdjustedAccessibility(token: Token & HasAccessibility) -> Token & HasAccessibility {
+            // We only want to adjust tokens that are accessible and lower than the enclosing type
+            guard token.accessibility.isAccessible && token.accessibility < accessibility else { return token }
+            var mutableToken = token
+            mutableToken.accessibility = accessibility
+            return mutableToken
+        }
+
+        let accessibilityAdjustedChildren = children.map { child -> Token in
+            guard let childWithAccessibility = child as? HasAccessibility & Token else { return child }
+            return withAdjustedAccessibility(token: childWithAccessibility)
+        }
+
+        let properties = accessibilityAdjustedChildren.compactMap { $0 as? InstanceVariable }
             .filter { $0.accessibility.isAccessible }
             .map { $0.serializeWithType() }
 
-        let methods = children.flatMap { $0 as? Method }
+        let methods = accessibilityAdjustedChildren.compactMap { $0 as? Method }
             .filter { $0.accessibility.isAccessible && !$0.isInit && !$0.isDeinit }
             .map { $0.serializeWithType() }
 
-        let initializers = children.flatMap { $0 as? Method }
+        let initializers = accessibilityAdjustedChildren.compactMap { $0 as? Method }
             .filter { $0.accessibility.isAccessible && $0.isInit && !$0.isDeinit }
             .map { $0.serializeWithType() }
 
+        let genericParametersString = genericParameters.map { $0.description }.joined(separator: ", ")
+        let genericArgumentsString = genericParameters.map { $0.name }.joined(separator: ", ")
+        let genericProtocolIdentity = genericParameters.map { "\(Templates.staticGenericParameter).\($0.name) == \($0.name)" }.joined(separator: ", ")
+        let isGeneric = !genericParameters.isEmpty
+
         return [
             "name": name,
-            "accessibility": accessibility,
+            "accessibility": accessibility.sourceName,
             "isAccessible": accessibility.isAccessible,
-            "children": children.map { $0.serializeWithType() },
+            "children": accessibilityAdjustedChildren.map { $0.serializeWithType() },
             "properties": properties,
             "methods": methods,
             "initializers": implementation ? [] : initializers,
             "isImplementation": implementation,
-            "mockName": "Mock\(name)"
+            "mockName": "Mock\(name)",
+            "inheritedTypes": inheritedTypes,
+            "attributes": attributes.filter { $0.isSupported },
+            "isGeneric": isGeneric,
+            "genericParameters": isGeneric ? "<\(genericParametersString)>" : "",
+            "genericArguments": isGeneric ? "<\(genericArgumentsString)>" : "",
+            "genericProtocolIdentity": genericProtocolIdentity,
         ]
     }
 }

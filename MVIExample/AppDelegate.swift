@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     setupNavigationAppearance()
 
     return true
@@ -45,6 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let barTintColor = UIColor(red: 0.84, green: 0.47, blue: 0.26, alpha: 1.0)
     UINavigationBar.appearance().backgroundColor = UIColor(red: 0.31, green: 0.31, blue: 0.31, alpha: 1.0)
     UIBarButtonItem.appearance().tintColor = barTintColor
-    UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: barTintColor]
+    UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: barTintColor]
   }
 }

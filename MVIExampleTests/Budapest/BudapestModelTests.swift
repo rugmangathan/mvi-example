@@ -40,7 +40,7 @@ class BudapestModelTests: XCTestCase {
 
     // Assert
     let expectedEvent = [
-      next(0, BudapestState(""))
+      Recorded.next(0, BudapestState(""))
     ]
     XCTAssertEqual(testObserver.events, expectedEvent)
   }
@@ -51,7 +51,7 @@ class BudapestModelTests: XCTestCase {
 
     // Assert
     let expectedEvents = [
-      next(0, BudapestState("RMK"))
+      Recorded.next(0, BudapestState("RMK"))
     ]
     XCTAssertEqual(testObserver.events, expectedEvents)
   }

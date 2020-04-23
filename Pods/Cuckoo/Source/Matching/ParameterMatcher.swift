@@ -22,3 +22,25 @@ public struct ParameterMatcher<T>: Matchable {
         return matchesFunction(input)
     }
 }
+
+public protocol CuckooOptionalType {
+    associatedtype Wrapped
+
+    static func from(optional: Optional<Wrapped>) -> Self
+}
+
+extension Optional: CuckooOptionalType {
+    public static func from(optional: Optional<Wrapped>) -> Optional<Wrapped> {
+        return optional
+    }
+}
+
+extension ParameterMatcher: OptionalMatchable where T: CuckooOptionalType {
+    public typealias OptionalMatchedType = T.Wrapped
+
+    public var optionalMatcher: ParameterMatcher<T.Wrapped?> {
+        return ParameterMatcher<T.Wrapped?> { other in
+            self.matchesFunction(T.from(optional: other))
+        }
+    }
+}

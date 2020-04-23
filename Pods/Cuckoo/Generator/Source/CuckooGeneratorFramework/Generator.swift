@@ -18,7 +18,7 @@ public struct Generator {
         declarations = file.declarations
     }
 
-    public func generate() throws -> String {
+    public func generate(debug: Bool = false) throws -> String {
         code.clear()
 
         let ext = Extension()
@@ -28,13 +28,13 @@ public struct Generator {
         }
 
         ext.registerFilter("matchableGenericNames") { (value: Any?) in
-            guard let parameters = value as? [MethodParameter] else { return value }
-            return self.matchableGenerics(with: parameters)
+            guard let method = value as? Method else { return value }
+            return self.matchableGenericTypes(from: method)
         }
 
-        ext.registerFilter("matchableGenericWhere") { (value: Any?) in
-            guard let parameters = value as? [MethodParameter] else { return value }
-            return self.matchableGenerics(where: parameters)
+        ext.registerFilter("matchableGenericWhereClause") { (value: Any?) in
+            guard let method = value as? Method else { return value }
+            return self.matchableGenericsWhereClause(from: method)
         }
 
         ext.registerFilter("matchableParameterSignature") { (value: Any?) in
@@ -46,40 +46,46 @@ public struct Generator {
             guard let parameters = value as? [MethodParameter] else { return value }
             return self.parameterMatchers(for: parameters)
         }
-        
-        ext.registerFilter("openNestedClosure") { (value: Any?, arguments: [Any?]) in
-            guard let parameters = value as? [MethodParameter] else { return value }
-            
-            let s = self.openNestedClosure(for: parameters, throwing: arguments.first as? Bool)            
-            return s
+
+        ext.registerFilter("openNestedClosure") { (value: Any?) in
+            guard let method = value as? Method else { return value }
+            return self.openNestedClosure(for: method)
         }
-        
+
         ext.registerFilter("closeNestedClosure") { (value: Any?) in
             guard let parameters = value as? [MethodParameter] else { return value }
             return self.closeNestedClosure(for: parameters)
         }
-        
+
         let environment = Environment(extensions: [ext])
 
-        let containers = declarations.flatMap { $0 as? ContainerToken }
+        let containers = declarations.compactMap { $0 as? ContainerToken }
             .filter { $0.accessibility.isAccessible }
             .map { $0.serializeWithType() }
 
-        return try environment.renderTemplate(string: Templates.mock, context: ["containers": containers])
+        return try environment.renderTemplate(string: Templates.mock, context: ["containers": containers, "debug": debug])
     }
 
-    private func matchableGenerics(with parameters: [MethodParameter]) -> String {
-        guard parameters.isEmpty == false else { return "" }
+    private func matchableGenericTypes(from method: Method) -> String {
+        guard !method.parameters.isEmpty || !method.genericParameters.isEmpty else { return "" }
 
-        let genericParameters = (1...parameters.count).map { "M\($0): Cuckoo.Matchable" }.joined(separator: ", ")
-        return "<\(genericParameters)>"
+        let matchableGenericParameters = method.parameters.enumerated().map { index, parameter -> String in
+            let type = parameter.isOptional ? "OptionalMatchable" : "Matchable"
+            return "M\(index + 1): Cuckoo.\(type)"
+        }
+        let methodGenericParameters = method.genericParameters.map { $0.description }
+        return "<\((matchableGenericParameters + methodGenericParameters).joined(separator: ", "))>"
     }
 
-    private func matchableGenerics(where parameters: [MethodParameter]) -> String {
-        guard parameters.isEmpty == false else { return "" }
+    private func matchableGenericsWhereClause(from method: Method) -> String {
+        guard method.parameters.isEmpty == false else { return "" }
 
-        let whereClause = parameters.enumerated().map { "M\($0 + 1).MatchedType == \(genericSafeType(from: $1.typeWithoutAttributes))" }.joined(separator: ", ")
-        return " where \(whereClause)"
+        let matchableWhereConstraints = method.parameters.enumerated().map { index, parameter -> String in
+            let type = parameter.isOptional ? "OptionalMatchedType" : "MatchedType"
+            return "M\(index + 1).\(type) == \(genericSafeType(from: parameter.type.withoutAttributes.unoptionaled.sugarized))"
+        }
+        let methodWhereConstraints = method.returnSignature.whereConstraints
+        return " where \((matchableWhereConstraints + methodWhereConstraints).joined(separator: ", "))"
     }
 
     private func matchableParameterSignature(with parameters: [MethodParameter]) -> String {
@@ -99,24 +105,34 @@ public struct Generator {
     private func genericSafeType(from type: String) -> String {
         return type.replacingOccurrences(of: "!", with: "?")
     }
-    
-    private func openNestedClosure(for parameters: [MethodParameter], throwing: Bool? = false) -> String {
+
+    private func openNestedClosure(for method: Method) -> String {
         var fullString = ""
-        for (index, parameter) in parameters.enumerated() {
+        for (index, parameter) in method.parameters.enumerated() {
             if parameter.isClosure && !parameter.isEscaping {
-                let indents = String.init(repeating: "\t", count: index + 1)
-                let tries = (throwing ?? false) ? " try " : " "
-                fullString += "\(indents)return\(tries)withoutActuallyEscaping(\(parameter.name), do: { (\(parameter.name)) in\n"
+                let indents = String(repeating: "\t", count: index)
+                let tries = method.isThrowing ? "try " : ""
+
+                let sugarizedReturnType = method.returnType.sugarized
+                let returnSignature: String
+                if sugarizedReturnType.isEmpty {
+                    returnSignature = sugarizedReturnType
+                } else {
+                    returnSignature = " -> \(sugarizedReturnType)"
+                }
+
+                fullString += "\(indents)return \(tries)withoutActuallyEscaping(\(parameter.name), do: { (\(parameter.name): @escaping \(parameter.type))\(returnSignature) in\n"
             }
         }
+
         return fullString
     }
-    
+
     private func closeNestedClosure(for parameters: [MethodParameter]) -> String {
         var fullString = ""
         for (index, parameter) in parameters.enumerated() {
             if parameter.isClosure && !parameter.isEscaping {
-                let indents = String.init(repeating: "\t", count: index + 1)
+                let indents = String(repeating: "\t", count: index)
                 fullString += "\(indents)})\n"
             }
         }

@@ -10,7 +10,11 @@ public protocol HasMockManager {
     var cuckoo_manager: MockManager { get }
 }
 
-public protocol Mock: HasMockManager {
+public protocol HasSuperclass {
+    static var cuckoo_hasSuperclass: Bool { get }
+}
+
+public protocol Mock: HasMockManager, HasSuperclass {
     associatedtype MocksType
     associatedtype Stubbing: StubbingProxy
     associatedtype Verification: VerificationProxy
@@ -18,6 +22,8 @@ public protocol Mock: HasMockManager {
     func getStubbingProxy() -> Stubbing
     
     func getVerificationProxy(_ callMatcher: CallMatcher, sourceLocation: SourceLocation) -> Verification
+
+    func enableDefaultImplementation(_ stub: MocksType)
 }
 
 public extension Mock {
@@ -27,6 +33,11 @@ public extension Mock {
     
     func getVerificationProxy(_ callMatcher: CallMatcher, sourceLocation: SourceLocation) -> Verification {
         return Verification(manager: cuckoo_manager, callMatcher: callMatcher, sourceLocation: sourceLocation)
+    }
+
+    func withEnabledDefaultImplementation(_ stub: MocksType) -> Self {
+        enableDefaultImplementation(stub)
+        return self
     }
 }
 
@@ -46,3 +57,16 @@ public extension ClassMock {
         return self
     }
 }
+
+public extension ClassMock {
+    static var cuckoo_hasSuperclass: Bool {
+        return true
+    }
+}
+
+public extension ProtocolMock {
+    static var cuckoo_hasSuperclass: Bool {
+        return false
+    }
+}
+

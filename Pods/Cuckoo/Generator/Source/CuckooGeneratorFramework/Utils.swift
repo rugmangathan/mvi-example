@@ -32,10 +32,23 @@ extension String.UTF8View {
     }
 }
 
+extension String {
+    func regexMatches(_ source: String) -> Bool {
+        let regex = try! NSRegularExpression(pattern: self)
+        return regex.firstMatch(in: source, range: NSRange(location: 0, length: source.count)) != nil
+    }
+}
+
 extension Sequence {
+    #if !swift(>=4.1)
+    public func compactMap<O>(_ transform: (Element) -> O?) -> [O] {
+        return self.flatMap(transform)
+    }
+    #endif
+
 
     func only<T>(_ type: T.Type) -> [T] {
-        return flatMap { $0 as? T }
+        return compactMap { $0 as? T }
     }
 
     func noneOf<T>(_ type: T.Type) -> [Iterator.Element] {
@@ -44,10 +57,8 @@ extension Sequence {
 }
 
 internal func extractRange(from dictionary: [String: SourceKitRepresentable], offset: Key, length: Key) -> CountableRange<Int>? {
-    guard let
-        offset = (dictionary[offset.rawValue] as? Int64).map({ Int($0) }),
-        let length = (dictionary[length.rawValue] as? Int64).map({ Int($0) })
-        else { return nil }
+    guard let offset = (dictionary[offset.rawValue] as? Int64).map(Int.init),
+        let length = (dictionary[length.rawValue] as? Int64).map(Int.init) else { return nil }
 
     return offset..<offset.advanced(by: length)
 }
